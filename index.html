@@ -3,54 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio - Efrain Cortez</title>
+  <title>Inicio - Efraín Cortez</title>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <video autoplay loop muted plays-inline class="back-vid">
-    <source src="images/galaxy.mp4" type="video/mp4">
-  </video>
+
+  <!-- Video de fondo -->
+  <div class="video-container">
+    <video autoplay loop muted plays-inline class="back-vid">
+      <source src="images/galaxy.mp4" type="video/mp4">
+    </video>
+  </div>
+
   <section class="main-section">
     <nav>
-      <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">Efrain</span> Cortez</h1>
-      <ul>
-        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a class="active" href="#">Inicio </a></li>
-        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="vista_habilidades.html">Habilidades</a></li>
-        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="https://cortezefrainlis.wuaze.com" target="_blank">Proyectos</a></li>
+      <h1 data-aos="zoom-in" data-aos-duration="1000">
+        <span style="color: #4acfee;">Efraín</span> Cortez
+      </h1>
+
+      <!-- Menú hamburguesa -->
+      <div class="menu-toggle" id="menu-toggle">
+        <i class='bx bx-menu'></i>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a class="active" href="#" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200">Inicio</a></li>
+        <li><a href="vista_habilidades.html" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400">Habilidades</a></li>
+        <li><a href="https://cortezefrainlis.wuaze.com" target="_blank" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="600">Proyectos</a></li>
       </ul>
     </nav>
 
     <div class="hero">
       <div class="hero-info">
-        <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Hola, mi nombre es Efrain Cortez</h1>
+        <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Hola, mi nombre es Efraín Cortez</h1>
         <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">Soy desarrollador </h2>
-        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">Soy estudiante de penúltimo año de Ingeniería en Ciencias de la Computación, con una fuerte pasión por la tecnología y el desarrollo de soluciones innovadoras. Me considero una persona proactiva y siempre disponible para enfrentar nuevos retos, lo que me permite aprender rápidamente y adaptarme a entornos dinámicos. A lo largo de mis estudios, he adquirido experiencia en diversas áreas de la programación y el desarrollo de software, y me he enfrentado a proyectos que han fortalecido mis habilidades técnicas y mi capacidad para trabajar en equipo.</p>
+        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">
+          Soy estudiante de penúltimo año de Ingeniería en Ciencias de la Computación, con una fuerte pasión por la tecnología y el desarrollo de soluciones innovadoras. Me considero una persona proactiva y siempre disponible para enfrentar nuevos retos, lo que me permite aprender rápidamente y adaptarme a entornos dinámicos. A lo largo de mis estudios, he adquirido experiencia en diversas áreas de la programación y el desarrollo de software, y me he enfrentado a proyectos que han fortalecido mis habilidades técnicas y mi capacidad para trabajar en equipo.
+        </p>
+
         <div class="Buttons">
-  <a href="https://wa.me/50360057601" target="_blank">
-    <button class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100">Contáctame</button>
-  </a>
-         <ul class="ul-icons">
-  <li>
-    <a href="https://github.com/EfraPayon777" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
-      <i class='bx bxl-github'></i>
-    </a>
-  </li>
-  <li>
-    <a href="https://drive.google.com/file/d/1VxpRQ-teZbmrp5sP8svKaHqdVj6wzLN-/view?usp=sharing" target="_blank" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
-      <i class='bx bx-envelope'></i>
-    </a>
-  </li>
-</ul>
+          <a href="https://wa.me/50360057601" target="_blank">
+            <button class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100">Contáctame</button>
+          </a>
+
+          <ul class="ul-icons">
+            <li>
+              <a href="https://github.com/EfraPayon777" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
+                <i class='bx bxl-github'></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://drive.google.com/file/d/1VxpRQ-teZbmrp5sP8svKaHqdVj6wzLN-/view?usp=sharing" target="_blank" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
+                <i class='bx bx-envelope'></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
       <div class="hero-img" data-aos="zoom-in-left" data-aos-duration="2500">
-        <img src="images/Diseño sin título (59) (1).png" alt="person-img" >
+        <img src="images/Diseño sin título (59) (1).png" alt="person-img">
       </div>
     </div>
 
+    <!-- Sección de información -->
     <div class="info-sec">
       <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1600">
         <h1>HTML</h1>
@@ -75,5 +93,16 @@
   <script>
     AOS.init();
   </script>
+
+  <!-- Script para el menú hamburguesa -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
 </body>
 </html>
