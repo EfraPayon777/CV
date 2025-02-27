@@ -14,18 +14,27 @@
   </video>
   <section class="main-section">
     <nav>
-      <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">Efrain</span> Cortez</h1>
-      <ul>
-        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Inicio</a></li>
-        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a class="active" href="#">Habilidades</a></li>
-        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="https://cortezefrainlis.wuaze.com" target="_blank">Proyectos</a></li>
-      </ul>
-    </nav>
+      <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">Efrain</span> Cortez</h1> 
+       <!-- Menú hamburguesa -->
+      <div class="menu-toggle">
+        <i class="bx bx-menu"></i>
+      </div>
 
+      <ul class="nav-links">
+        <li data-aos="fade-in" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Inicio</a></li>
+        <li data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400"><a class="active" href="#">Habilidades</a></li>
+        <li data-aos="fade-in" data-aos-duration="1000" data-aos-delay="300"><a href="https://cortezefrainlis.wuaze.com" target="_blank">Proyectos</a></li>
+      </ul>
+     
+     
+    </nav>
     <div class="skills-section">
       <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1600">Habilidades Técnicas</h2>
+      <br></br>
       <div class="skills-columns">
-        <!-- Frontend -->
+        <!-- Aquí van las columnas de habilidades (igual que antes) -->
+        <!-- ... -->
+          <!-- Frontend -->
         <div class="skills-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1700">
           <h3>Frontend Backend</h3>
           <ul>
@@ -35,7 +44,6 @@
             <li><strong>PHP</strong>: Desarrollo de aplicaciones web dinámicas y gestión de bases de datos con PHP.</li>
           </ul>
         </div>
-
         <!--  Base de Datos -->
         <div class="skills-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1800">
           <h3>Base de Datos & Integración</h3>
@@ -45,7 +53,6 @@
             <li><strong>Integration Service Projects</strong>: Desarrollo y administración de proyectos de integración de servicios entre diferentes plataformas y sistemas.</li>
           </ul>
         </div>
-
         <!--  Redes & Servidores -->
         <div class="skills-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1900">
           <h3>Redes & Servidores</h3>
@@ -55,7 +62,6 @@
             <li><strong>Sistemas Operativos</strong>: Conocimiento de sistemas operativos Linux y Windows Server.</li>
           </ul>
         </div>
-
         <!--  Productividad & Office -->
         <div class="skills-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2000">
           <h3>Productividad y Office</h3>
@@ -64,7 +70,6 @@
             <li><strong>Mantenimiento y soporte de computadoras</strong>: Conocimiento en hardware y software para dar soporte y solución a problemas que se presenten con capacidad de diagnosticar y reparar fallos.</li>
           </ul>
         </div>
-
         <!--  Barra de habilidades -->
         <div class="skills-column" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2100">
           <h3>Progreso de Habilidades</h3>
@@ -116,8 +121,14 @@
       </div>
     </div>
   </section>
-
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
   <script>
     AOS.init();
   </script>
