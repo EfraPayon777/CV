@@ -5,16 +5,16 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
+body {
   position: relative;
-  height: fit-content;
-  width:100%;
-  height: 100vh;
-  overflow: hidden;
+  width: 100%;
+  height: auto;
+  overflow: auto;
   display: flex;
-  padding: 30px 0;
   justify-content: center;
   align-items: center;
+  padding: 30px 0; /* Espacio arriba y abajo */
+  box-sizing: border-box;
 }
 
 .back-vid{
@@ -41,19 +41,20 @@ body{
 }
 
 
-
 .main-section{
   width: 90%;
   height: 90%;
-  background-color:#4ad0ee1b;
+  background-color: #4ad0ee1b;
   backdrop-filter: blur(10px);
   border-radius: 50px;
   box-shadow: 5px 5px 20px 1px #4acfee;
+  margin:  10px 100px; 
+
 }
 
 nav{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 30px 40px;
 }
@@ -62,11 +63,13 @@ nav h1{
   color: white;
   font-size: 30px;
   font-weight: 900;
+  margin-right: auto;
 }
 
 nav ul{
   list-style: none;
   display: flex;
+  gap: 20px; /* Separa los enlaces */
 }
 
 nav a{
@@ -74,15 +77,34 @@ nav a{
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
-  transition: 0.2s;
+  transition: color 0.2s, text-decoration 0.2s, transform 0.2s;
   padding: 0px 25px;
 }
 
-nav a:hover ,
+nav a:hover,
 .active {
-  color : #4acfee;
+  color: #4acfee;
   text-decoration: underline;
+  transform: translateY(-3px); /* Animación suave al pasar el ratón */
 }
+
+nav a:focus {
+  outline: none; /* Elimina el borde predeterminado */
+  border-bottom: 2px solid #4acfee; /* Añade un borde visual cuando el enlace está enfocado */
+}
+
+.main-section {
+  width: 90%; /* Ancho al 90% */
+  height: 90%; /* Altura al 90% */
+  background-color: #4ad0ee1b;
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  box-shadow: 5px 5px 20px 1px #4acfee;
+  margin: 40px 20px; /* Margen arriba y abajo de 40px, laterales de 20px */
+  position: relative; /* Importante para posicionar el video dentro de esta sección */
+  overflow: hidden; /* Esto oculta cualquier parte del video que se salga de la sección */
+}
+
 
 .hero{
   display: flex;
@@ -183,7 +205,7 @@ nav a:hover ,
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  overflow: hidden; /* Asegura que todo fuera del círculo no se vea */
+  overflow: hidden;
   box-shadow: 0 0 10px #4eddfd;
   transition: 0.5s;
 }
@@ -193,12 +215,12 @@ nav a:hover ,
 }
 
 .hero-img img {
-  width: 100%; /* Asegura que la imagen cubra completamente el ancho del contenedor */
-  height: 100%; /* Asegura que la imagen cubra completamente el alto del contenedor */
-  object-fit: cover; /* La imagen cubre todo el círculo sin distorsión */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que cubra el círculo completamente */
+  mix-blend-mode: lighten;
 }
-
-
 .info-sec{
   display: flex;
   width: 100%;
@@ -477,3 +499,111 @@ nav a:hover ,
   color: #0e1217;
   box-shadow: 0 0 10px #4acfee;
 }
+
+.menu-toggle { 
+  font-size: 36px; /* Aumenta el tamaño del icono */
+  color: white; /* Puedes cambiar el color si deseas que se vea más visible */
+  cursor: pointer; /* Asegura que el cursor cambie cuando pasas sobre el icono */
+  z-index: 1000; /* Para asegurarse de que el icono esté por encima de otros elementos */
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* El menú hamburguesa se muestra solo en pantallas pequeñas */
+  }
+}
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .video-container {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    z-index: -1; 
+  }
+  
+  .back-vid {
+    object-fit: cover; 
+    width: 100%; 
+    height: 100%; 
+  }
+  
+  .info-sec {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    margin-top: 20px;
+  }
+  
+  .info-card {
+    width: 45%;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.4em; /* Texto más grande pero no tan grande como antes */
+    color: #ffffff; /* Texto blanco para que resalte sobre el fondo */
+    background: transparent; /* Fondo transparente */
+    border: none; /* Elimina el borde */
+    box-shadow: none; /* Elimina la sombra */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .info-card h1 {
+    font-size: 1.8em; /* Título un poco más grande, pero ajustado */
+    margin-bottom: 10px;
+  }
+  
+  .info-card p {
+    font-size: 1.3em; /* Párrafo con texto grande pero ajustado */
+    word-wrap: break-word; /* Asegura que el texto largo se ajuste y no se desborde */
+  }
+  
+  .info-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  @media (max-width: 768px) {
+    .info-card {
+      width: 80%; /* Aumenta el ancho de las tarjetas en pantallas más pequeñas */
+      margin: 10px auto; /* Centra las tarjetas con un margen de 10px */
+    }
+  
+    .info-card h1 {
+      font-size: 1.5em; /* Ajusta el tamaño del título en pantallas más pequeñas */
+    }
+  
+    .info-card p {
+      font-size: 1.2em; /* Ajusta el tamaño del párrafo en pantallas más pequeñas */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .info-card {
+      width: 90%; /* Aumenta el ancho de las tarjetas en pantallas muy pequeñas */
+    }
+  
+    .info-card h1 {
+      font-size: 1.4em; /* Ajusta aún más el tamaño del título */
+    }
+  
+    .info-card p {
+      font-size: 1.1em; /* Ajusta aún más el tamaño del párrafo */
+    }
+  }
+  
