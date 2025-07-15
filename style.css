@@ -607,3 +607,32 @@ nav a:focus {
     }
   }
   
+/* --- SCROLL INTERNO ELEGANTE PARA COLUMNAS DE HABILIDADES --- */
+.skills-column {
+  overflow-y: auto;
+  max-height: 60vh;
+  scrollbar-width: thin;
+  scrollbar-color: #4acfee #222;
+}
+.skills-column::-webkit-scrollbar {
+  width: 8px;
+}
+.skills-column::-webkit-scrollbar-thumb {
+  background: #4acfee;
+  border-radius: 4px;
+}
+.skills-column::-webkit-scrollbar-track {
+  background: #222;
+}
+
+@media (max-width: 900px) {
+  .skills-column {
+    max-height: 40vh;
+  }
+}
+@media (max-width: 600px) {
+  .skills-column {
+    max-height: 32vh;
+  }
+}
+  
