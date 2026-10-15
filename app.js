@@ -85,9 +85,96 @@ document.addEventListener('DOMContentLoaded', () => {
       prevRect: null
     };
 
-    // Bring to front on click
+    // Add statusbar resize grip for touch and mouse resizing
+    const statusbar = win.querySelector('.xp-statusbar');
+    if (statusbar && !statusbar.querySelector('.xp-resize-grip')) {
+      const grip = document.createElement('div');
+      grip.className = 'xp-resize-grip';
+      grip.title = 'Arrastrar para cambiar tamaño';
+      statusbar.appendChild(grip);
+      initResizeGrip(grip, win);
+    }
+
+    // Bring to front on click / touch
     win.addEventListener('mousedown', () => bringToFront(id));
+    win.addEventListener('touchstart', () => bringToFront(id), { passive: true });
   });
+
+  // Corner resize grip logic
+  function initResizeGrip(grip, winEl) {
+    let isResizing = false;
+    let startX, startY, startWidth, startHeight;
+
+    function startResize(clientX, clientY) {
+      if (winEl.classList.contains('maximized') || winEl.isMaximized) {
+        winEl.classList.remove('maximized');
+        winEl.isMaximized = false;
+      }
+      isResizing = true;
+      startX = clientX;
+      startY = clientY;
+      const rect = winEl.getBoundingClientRect();
+      startWidth = rect.width;
+      startHeight = rect.height;
+      bringToFront(winEl.id);
+    }
+
+    function doResize(clientX, clientY) {
+      if (!isResizing) return;
+      const deltaX = clientX - startX;
+      const deltaY = clientY - startY;
+
+      const minW = 260;
+      const minH = 200;
+      const maxW = window.innerWidth - 8;
+      const maxH = window.innerHeight - 34;
+
+      const newWidth = Math.max(minW, Math.min(maxW, startWidth + deltaX));
+      const newHeight = Math.max(minH, Math.min(maxH, startHeight + deltaY));
+
+      winEl.style.width = `${newWidth}px`;
+      winEl.style.height = `${newHeight}px`;
+    }
+
+    function stopResize() {
+      isResizing = false;
+    }
+
+    // Mouse resize
+    grip.addEventListener('mousedown', (e) => {
+      e.stopPropagation();
+      startResize(e.clientX, e.clientY);
+
+      function onMouseMove(moveEvent) {
+        doResize(moveEvent.clientX, moveEvent.clientY);
+      }
+      function onMouseUp() {
+        stopResize();
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+      }
+      document.addEventListener('mousemove', onMouseMove);
+      document.addEventListener('mouseup', onMouseUp);
+    });
+
+    // Touch resize for mobile / tablet
+    grip.addEventListener('touchstart', (e) => {
+      e.stopPropagation();
+      if (e.touches.length === 1) {
+        startResize(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+
+    grip.addEventListener('touchmove', (e) => {
+      if (!isResizing || e.touches.length !== 1) return;
+      if (e.cancelable) e.preventDefault();
+      const t = e.touches[0];
+      doResize(t.clientX, t.clientY);
+    }, { passive: false });
+
+    grip.addEventListener('touchend', stopResize);
+    grip.addEventListener('touchcancel', stopResize);
+  }
 
   function bringToFront(id) {
     highestZ += 2;
@@ -117,20 +204,34 @@ document.addEventListener('DOMContentLoaded', () => {
       win.el.style.display = 'flex';
       playSound('restore');
 
-      // Center if not positioned
-      if (!win.el.style.top || win.el.style.top === '') {
-        const desktopWidth = window.innerWidth;
-        const desktopHeight = window.innerHeight - 30;
-        const width = Math.min(win.el.offsetWidth || 560, desktopWidth * 0.9);
-        const height = Math.min(win.el.offsetHeight || 440, desktopHeight * 0.85);
+      const isMobile = window.innerWidth <= 768;
 
-        const left = Math.max(20, (desktopWidth - width) / 2 + (Object.keys(windows).indexOf(id) * 20));
-        const top = Math.max(20, (desktopHeight - height) / 2 + (Object.keys(windows).indexOf(id) * 15));
+      if (isMobile) {
+        // Mobile phone positioning: centered with balanced margins
+        const mobileW = Math.min(336, window.innerWidth - 20);
+        const mobileH = Math.min(480, window.innerHeight - 46);
+        const mobileLeft = Math.max(10, Math.floor((window.innerWidth - mobileW) / 2));
+        win.el.style.left = `${mobileLeft}px`;
+        win.el.style.top = '8px';
+        win.el.style.width = `${mobileW}px`;
+        win.el.style.height = `${mobileH}px`;
+        win.isMaximized = false;
+      } else {
+        // Desktop positioning
+        if (!win.el.style.top || win.el.style.top === '') {
+          const desktopWidth = window.innerWidth;
+          const desktopHeight = window.innerHeight - 30;
+          const width = Math.min(win.el.offsetWidth || 560, desktopWidth * 0.9);
+          const height = Math.min(win.el.offsetHeight || 440, desktopHeight * 0.85);
 
-        win.el.style.left = `${left}px`;
-        win.el.style.top = `${top}px`;
-        win.el.style.width = `${width}px`;
-        win.el.style.height = `${height}px`;
+          const left = Math.max(20, (desktopWidth - width) / 2 + (Object.keys(windows).indexOf(id) * 20));
+          const top = Math.max(20, (desktopHeight - height) / 2 + (Object.keys(windows).indexOf(id) * 15));
+
+          win.el.style.left = `${left}px`;
+          win.el.style.top = `${top}px`;
+          win.el.style.width = `${width}px`;
+          win.el.style.height = `${height}px`;
+        }
       }
 
       addTaskbarItem(id);
@@ -167,18 +268,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const win = windows[id];
     if (!win) return;
 
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+      const currentHeight = win.el.offsetHeight;
+      const isCurrentlyLarge = currentHeight > (window.innerHeight * 0.55);
+
+      if (isCurrentlyLarge) {
+        // Toggle to Compact Mode (hacerla más pequeña)
+        win.el.classList.remove('maximized');
+        win.isMaximized = false;
+        const compactW = Math.min(315, window.innerWidth - 24);
+        const compactH = Math.min(290, Math.floor(window.innerHeight * 0.45));
+        const compactLeft = Math.max(12, Math.floor((window.innerWidth - compactW) / 2));
+        win.el.style.width = `${compactW}px`;
+        win.el.style.height = `${compactH}px`;
+        win.el.style.left = `${compactLeft}px`;
+        win.el.style.top = '30px';
+      } else {
+        // Toggle to Fullscreen Mode
+        win.el.classList.add('maximized');
+        win.isMaximized = true;
+        win.el.style.left = '6px';
+        win.el.style.top = '6px';
+        win.el.style.width = `${window.innerWidth - 12}px`;
+        win.el.style.height = `${window.innerHeight - 42}px`;
+      }
+      playSound('restore');
+      return;
+    }
+
     if (win.isMaximized) {
-      // Restore previous size
+      // Restore previous size on desktop
       win.el.classList.remove('maximized');
+      win.isMaximized = false;
       if (win.prevRect) {
         win.el.style.top = win.prevRect.top;
         win.el.style.left = win.prevRect.left;
         win.el.style.width = win.prevRect.width;
         win.el.style.height = win.prevRect.height;
       }
-      win.isMaximized = false;
     } else {
-      // Maximize
+      // Maximize desktop
       win.prevRect = {
         top: win.el.style.top,
         left: win.el.style.left,
@@ -228,76 +359,84 @@ document.addEventListener('DOMContentLoaded', () => {
     let isDragging = false;
     let startX, startY, initialLeft, initialTop;
 
-    titlebar.addEventListener('mousedown', (e) => {
-      // Ignore if clicking on control buttons
-      if (e.target.closest('.xp-control-btn') || winEl.classList.contains('maximized')) return;
+    function startDrag(clientX, clientY) {
+      // If maximized, unmaximize so dragging works smoothly
+      if (winEl.classList.contains('maximized') || winEl.isMaximized) {
+        winEl.classList.remove('maximized');
+        winEl.isMaximized = false;
+        if (window.innerWidth <= 768) {
+          const compactW = Math.min(340, window.innerWidth - 16);
+          const compactH = Math.min(380, Math.floor(window.innerHeight * 0.6));
+          winEl.style.width = `${compactW}px`;
+          winEl.style.height = `${compactH}px`;
+        }
+      }
 
       isDragging = true;
-      startX = e.clientX;
-      startY = e.clientY;
+      startX = clientX;
+      startY = clientY;
 
       const rect = winEl.getBoundingClientRect();
       initialLeft = rect.left;
       initialTop = rect.top;
 
       bringToFront(winEl.id);
+    }
+
+    function doDrag(clientX, clientY) {
+      if (!isDragging) return;
+      const deltaX = clientX - startX;
+      const deltaY = clientY - startY;
+
+      let newLeft = initialLeft + deltaX;
+      let newTop = initialTop + deltaY;
+
+      // Desktop bounds
+      newTop = Math.max(0, Math.min(window.innerHeight - 50, newTop));
+      newLeft = Math.max(-winEl.offsetWidth + 60, Math.min(window.innerWidth - 60, newLeft));
+
+      winEl.style.left = `${newLeft}px`;
+      winEl.style.top = `${newTop}px`;
+    }
+
+    function stopDrag() {
+      isDragging = false;
+    }
+
+    // Mouse drag
+    titlebar.addEventListener('mousedown', (e) => {
+      if (e.target.closest('.xp-control-btn')) return;
+      startDrag(e.clientX, e.clientY);
 
       function onMouseMove(moveEvent) {
-        if (!isDragging) return;
-        const deltaX = moveEvent.clientX - startX;
-        const deltaY = moveEvent.clientY - startY;
-
-        let newLeft = initialLeft + deltaX;
-        let newTop = initialTop + deltaY;
-
-        // Desktop bounds
-        newTop = Math.max(0, Math.min(window.innerHeight - 60, newTop));
-        newLeft = Math.max(-winEl.offsetWidth + 80, Math.min(window.innerWidth - 80, newLeft));
-
-        winEl.style.left = `${newLeft}px`;
-        winEl.style.top = `${newTop}px`;
+        doDrag(moveEvent.clientX, moveEvent.clientY);
       }
-
       function onMouseUp() {
-        isDragging = false;
+        stopDrag();
         document.removeEventListener('mousemove', onMouseMove);
         document.removeEventListener('mouseup', onMouseUp);
       }
-
       document.addEventListener('mousemove', onMouseMove);
       document.addEventListener('mouseup', onMouseUp);
     });
 
-    // Touch support for dragging
+    // Touch support for dragging on phones and tablets
     titlebar.addEventListener('touchstart', (e) => {
-      if (e.target.closest('.xp-control-btn') || winEl.classList.contains('maximized')) return;
-      const touch = e.touches[0];
-      isDragging = true;
-      startX = touch.clientX;
-      startY = touch.clientY;
-      const rect = winEl.getBoundingClientRect();
-      initialLeft = rect.left;
-      initialTop = rect.top;
-      bringToFront(winEl.id);
-
-      function onTouchMove(moveEvent) {
-        if (!isDragging) return;
-        const t = moveEvent.touches[0];
-        let newLeft = initialLeft + (t.clientX - startX);
-        let newTop = initialTop + (t.clientY - startY);
-        winEl.style.left = `${newLeft}px`;
-        winEl.style.top = `${newTop}px`;
+      if (e.target.closest('.xp-control-btn')) return;
+      if (e.touches.length === 1) {
+        startDrag(e.touches[0].clientX, e.touches[0].clientY);
       }
-
-      function onTouchEnd() {
-        isDragging = false;
-        document.removeEventListener('touchmove', onTouchMove);
-        document.removeEventListener('touchend', onTouchEnd);
-      }
-
-      document.addEventListener('touchmove', onTouchMove);
-      document.addEventListener('touchend', onTouchEnd);
     }, { passive: true });
+
+    titlebar.addEventListener('touchmove', (e) => {
+      if (!isDragging || e.touches.length !== 1) return;
+      if (e.cancelable) e.preventDefault();
+      const t = e.touches[0];
+      doDrag(t.clientX, t.clientY);
+    }, { passive: false });
+
+    titlebar.addEventListener('touchend', stopDrag);
+    titlebar.addEventListener('touchcancel', stopDrag);
   });
 
   // Desktop Icons Selection & Double Click
@@ -650,7 +789,7 @@ document.addEventListener('DOMContentLoaded', () => {
       openWindow('win-qa-pos');
     } else if (hash === '#xray' || hash === '#qa-xray') {
       openWindow('win-qa-xray');
-    } else {
+    } else if (window.innerWidth > 768) {
       openWindow('win-about');
     }
   }, 400);

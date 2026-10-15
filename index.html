@@ -139,8 +139,8 @@
     </div>
 
     <!-- ==================== WINDOW 1: SOBRE MÍ (MI PC) ==================== -->
-    <div class="xp-window active" id="win-about" data-title="Mi PC - Efraín Cortez"
-      data-icon="assets/icons/computer.png" style="width: 660px; height: 530px; left: 180px; top: 30px; display: flex;">
+    <div class="xp-window" id="win-about" data-title="Mi PC - Efraín Cortez"
+      data-icon="assets/icons/computer.png" style="width: 660px; height: 530px; left: 180px; top: 30px;">
       <div class="xp-titlebar">
         <div class="xp-titlebar-title">
           <img src="assets/icons/computer.png" alt="">
@@ -209,27 +209,26 @@
         <!-- Información del Sistema -->
         <fieldset class="xp-group">
           <legend>Especificaciones del Perfil Profesional</legend>
-          <table style="width: 100%; border-collapse: collapse; font-size: 11px;">
-            <tr style="border-bottom: 1px dotted #ccc;">
-              <td style="padding: 4px; font-weight: bold; width: 140px; color: #003399;">Rol Principal:</td>
-              <td style="padding: 4px;">Analista QA / Quality Assurance Engineer</td>
-            </tr>
-            <tr style="border-bottom: 1px dotted #ccc;">
-              <td style="padding: 4px; font-weight: bold; color: #003399;">Especialidad:</td>
-              <td style="padding: 4px;">Pruebas Funcionales, APIs, Regresión, Automatización & SQL</td>
-            </tr>
-            <tr style="border-bottom: 1px dotted #ccc;">
-              <td style="padding: 4px; font-weight: bold; color: #003399;">Formación Académica:</td>
-              <td style="padding: 4px;">Ingeniería en Ciencias de la Computación - Universidad Don Bosco</td>
-            </tr>
-            <tr style="border-bottom: 1px dotted #ccc;">
-              <td style="padding: 4px; font-weight: bold; color: #003399;">Idiomas:</td>
-              <td style="padding: 4px;">Español (Nativo) &nbsp;|&nbsp; Inglés (Avanzado / Superior, Competencia
-                Profesional)</td>
+          <table class="xp-specs-table">
+            <tr>
+              <td>Rol Principal:</td>
+              <td>Analista QA / Quality Assurance Engineer</td>
             </tr>
             <tr>
-              <td style="padding: 4px; font-weight: bold; color: #003399;">LinkedIn:</td>
-              <td style="padding: 4px;">
+              <td>Especialidad:</td>
+              <td>Pruebas Funcionales, APIs, Regresión, Automatización & SQL</td>
+            </tr>
+            <tr>
+              <td>Formación Académica:</td>
+              <td>Ingeniería en Ciencias de la Computación - Universidad Don Bosco</td>
+            </tr>
+            <tr>
+              <td>Idiomas:</td>
+              <td>Español (Nativo) &nbsp;|&nbsp; Inglés (Avanzado / Superior, Competencia Profesional)</td>
+            </tr>
+            <tr>
+              <td>LinkedIn:</td>
+              <td>
                 <a href="https://linkedin.com/in/efrain-cortez-55b573399" target="_blank"
                   style="color: #0055ea; text-decoration: underline;">linkedin.com/in/efrain-cortez-55b573399</a>
               </td>
@@ -238,7 +237,7 @@
         </fieldset>
 
         <!-- Botones de Acción -->
-        <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 10px;">
+        <div class="xp-window-actions" style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; margin-top: 10px;">
           <button class="xp-btn" onclick="openWindow('win-skills')">
             <img src="assets/icons/control_panel.png" style="width:14px; height:14px;" alt=""> Ver Habilidades
           </button>
@@ -767,7 +766,7 @@
       </div>
       <div class="xp-body" style="padding: 0;">
         <textarea readonly
-          style="width: 100%; height: 100%; border: none; outline: none; font-family: 'Lucida Console', 'Courier New', monospace; font-size: 12px; padding: 12px; line-height: 1.4; resize: none; background: #fff; color: #000;">
+          style="width: 100%; height: 100%; border: none; outline: none; font-family: 'Lucida Console', 'Courier New', monospace; font-size: 12px; padding: 12px; line-height: 1.4; resize: none; background: #fff; color: #000; box-sizing: border-box; white-space: pre-wrap; word-break: break-word;">
 ======================================================================
 CURRICULUM VITAE - EFRAÍN ANTONIO CORTEZ CLAROS
 Analista QA | Automatización e Integraciones
