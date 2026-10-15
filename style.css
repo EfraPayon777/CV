@@ -1412,9 +1412,121 @@ html, body {
     padding: 0 0 4px 0 !important;
     word-break: break-all;
   }
+
+  /* Address Bar inside Windows */
+  .xp-addressbar {
+    padding: 2px 4px;
+    gap: 4px;
+    flex-wrap: nowrap;
+  }
+
+  .xp-address-label {
+    display: none !important;
+  }
+
+  .xp-address-input {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .xp-address-input span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .xp-go-btn {
+    display: none !important;
+  }
+
+  .xp-address-btn {
+    flex-shrink: 0;
+    padding: 3px 6px !important;
+    font-size: 10px !important;
+    white-space: nowrap;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+
+  /* Banner adjustments (Sobre Mí, QA POS, QA Suite) */
+  .xp-banner {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+    padding: 10px 8px !important;
+  }
+
+  .xp-banner img,
+  .xp-banner-photo {
+    width: 58px !important;
+    height: 58px !important;
+    margin: 0 auto !important;
+    flex-shrink: 0;
+  }
+
+  .xp-banner-info {
+    width: 100% !important;
+  }
+
+  .xp-banner-info .meta {
+    justify-content: center;
+    font-size: 10px;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .xp-banner-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 6px !important;
+    margin-top: 8px !important;
+  }
+
+  .xp-banner-actions .xp-btn,
+  .xp-banner-actions a.xp-btn,
+  .xp-banner-actions button.xp-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 6px 8px !important;
+    box-sizing: border-box !important;
+    font-size: 11px !important;
+    white-space: normal !important;
+  }
+
+  /* Experience header wrapping */
+  .exp-header {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  /* MSN messenger buttons */
+  .msn-actions-row .xp-btn {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+  }
+
+  .xp-window-actions {
+    justify-content: stretch !important;
+  }
+
+  .xp-window-actions .xp-btn {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center;
+    padding: 5px 8px !important;
+    box-sizing: border-box;
+  }
 }
 
-/* Extra Small Mobile Screens (<= 480px, e.g. Samsung S22: 360px) */
+/* Extra Small Mobile Screens (<= 480px) */
 @media (max-width: 480px) {
   .taskbar {
     height: 30px;
@@ -1444,85 +1556,8 @@ html, body {
     font-size: 10px;
   }
 
-  .xp-banner {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    gap: 8px !important;
-    padding: 10px 8px !important;
-  }
-
-  .xp-banner-photo {
-    width: 64px !important;
-    height: 64px !important;
-    margin: 0 auto !important;
-  }
-
-  .xp-banner-info {
-    width: 100%;
-  }
-
-  .xp-banner-info .meta {
-    justify-content: center;
-    font-size: 10px;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .xp-banner-info div[style*="display: flex"] {
-    flex-direction: column !important;
-    width: 100%;
-    gap: 6px !important;
-  }
-
-  .xp-banner-info .xp-btn {
-    width: 100% !important;
-    justify-content: center !important;
-    box-sizing: border-box;
-  }
-
   .xp-titlebar-title {
     font-size: 11px;
-  }
-
-  .xp-addressbar {
-    padding: 2px 4px;
-    gap: 4px;
-  }
-
-  .xp-address-label {
-    display: none !important;
-  }
-
-  .xp-address-input {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .xp-go-btn {
-    display: none !important;
-  }
-
-  .xp-addressbar .xp-btn {
-    font-size: 10px;
-    padding: 3px 6px;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    box-sizing: border-box;
-  }
-
-  .xp-window-actions {
-    justify-content: stretch !important;
-  }
-
-  .xp-window-actions .xp-btn {
-    flex: 1 1 100% !important;
-    width: 100% !important;
-    justify-content: center !important;
-    text-align: center;
-    padding: 5px 8px !important;
-    box-sizing: border-box;
   }
 }
 
