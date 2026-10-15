@@ -642,6 +642,10 @@ document.addEventListener('DOMContentLoaded', () => {
       openWindow('win-education');
     } else if (hash === '#notepad' || hash === '#resumen') {
       openWindow('win-notepad');
+    } else if (hash === '#pos' || hash === '#qa-pos') {
+      openWindow('win-qa-pos');
+    } else if (hash === '#xray' || hash === '#qa-xray') {
+      openWindow('win-qa-xray');
     } else {
       openWindow('win-about');
     }

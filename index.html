@@ -96,7 +96,23 @@
         <span class="icon-label">Portafolio Web</span>
       </div>
 
-      <!-- 10. Papelera de reciclaje -->
+      <!-- 10. QA POS Automation Macro .EXE -->
+      <div class="desktop-icon" data-action="open-window" data-target="win-qa-pos" tabindex="0" title="QA_POS_Macro.exe - Suite portable de automatización POS">
+        <div class="icon-img-wrapper">
+          <img src="assets/icons/qa_pos.png" alt="QA POS Macro">
+        </div>
+        <span class="icon-label">QA_POS_Macro.exe</span>
+      </div>
+
+      <!-- 11. QA Suite Xray .EXE -->
+      <div class="desktop-icon" data-action="open-window" data-target="win-qa-xray" tabindex="0" title="QA_Suite_Xray.exe - Generador de casos Jira & Xray">
+        <div class="icon-img-wrapper">
+          <img src="assets/icons/qa_xray.png" alt="QA Suite Xray">
+        </div>
+        <span class="icon-label">QA_Suite_Xray.exe</span>
+      </div>
+
+      <!-- 12. Papelera de reciclaje -->
       <div class="desktop-icon" data-action="recycle" tabindex="0" title="Papelera de reciclaje (Defectos y Bugs Resueltos)">
         <div class="icon-img-wrapper">
           <img src="assets/icons/recycle_full.png" id="desktop-recycle-icon" alt="Papelera">
@@ -494,6 +510,33 @@
               <span class="xp-btn" style="font-size: 10px;">Python</span>
               <span class="xp-btn" style="font-size: 10px;">Oracle SQL</span>
               <span class="xp-btn" style="font-size: 10px;">JSON / XML</span>
+            </div>
+
+            <!-- Proyectos Destacados desarrollados -->
+            <div style="margin-top: 10px; padding: 8px; background: #eef4fc; border: 1px solid #c8dbf2; border-radius: 4px;">
+              <div style="font-weight: bold; color: #003399; margin-bottom: 6px; display: flex; align-items: center; gap: 6px;">
+                <img src="assets/icons/run.png" style="width: 14px; height: 14px;" alt=""> Proyectos de Automatización QA Desarrollados:
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 6px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 6px; border: 1px solid #d0d0bf; border-radius: 3px;">
+                  <div>
+                    <strong>QA_POS_Macro.exe</strong> — Suite de macros de transacciones POS (AutoHotkey, Vista Aero)
+                  </div>
+                  <div style="display: flex; gap: 4px;">
+                    <button class="xp-btn" onclick="openWindow('win-qa-pos')" style="font-size: 10px;">Ver .EXE</button>
+                    <a href="https://github.com/EfrainSN/QA-POS-Automation-Macro" target="_blank" class="xp-btn primary" style="font-size: 10px; text-decoration: none;">GitHub</a>
+                  </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; background: #fff; padding: 6px; border: 1px solid #d0d0bf; border-radius: 3px;">
+                  <div>
+                    <strong>QA_Suite_Xray.exe</strong> — Gestor y exportador CSV para Jira & Xray (Python, Xstore, Omnipay)
+                  </div>
+                  <div style="display: flex; gap: 4px;">
+                    <button class="xp-btn" onclick="openWindow('win-qa-xray')" style="font-size: 10px;">Ver .EXE</button>
+                    <a href="https://github.com/EfrainSN/QA-Suite-Xray" target="_blank" class="xp-btn primary" style="font-size: 10px; text-decoration: none;">GitHub</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -909,6 +952,190 @@ Disponibles bajo solicitud.
     </div>
 
 
+    <!-- ==================== WINDOW 9: QA POS AUTOMATION MACRO .EXE ==================== -->
+    <div class="xp-window" id="win-qa-pos" data-title="QA_POS_Macro.exe" data-icon="assets/icons/qa_pos.png" style="width: 650px; height: 530px; left: 240px; top: 70px;">
+      <div class="xp-titlebar">
+        <div class="xp-titlebar-title">
+          <img src="assets/icons/qa_pos.png" alt="">
+          <span>QA_POS_Macro.exe - Suite de Automatización POS (Windows Vista Aero Glass)</span>
+        </div>
+        <div class="xp-titlebar-controls">
+          <button class="xp-control-btn" onclick="minimizeWindow('win-qa-pos')">_</button>
+          <button class="xp-control-btn" onclick="maximizeWindow('win-qa-pos')">□</button>
+          <button class="xp-control-btn close" onclick="closeWindow('win-qa-pos')">✕</button>
+        </div>
+      </div>
+      <div class="xp-menubar">
+        <span class="xp-menu-item">Archivo</span>
+        <span class="xp-menu-item">Acciones</span>
+        <span class="xp-menu-item">Ver</span>
+        <span class="xp-menu-item">Ayuda</span>
+      </div>
+      <div class="xp-addressbar">
+        <span class="xp-address-label">Ubicación</span>
+        <div class="xp-address-input">
+          <img src="assets/icons/qa_pos.png" alt="">
+          <span>C:\Archivos_de_programa\QA_Automation\QA_POS_Macro.exe</span>
+        </div>
+        <a href="https://github.com/EfrainSN/QA-POS-Automation-Macro" target="_blank" class="xp-btn primary" style="text-decoration:none;">
+          <img src="assets/icons/ie.png" style="width:14px;height:14px;" alt=""> Repositorio GitHub ➔
+        </a>
+      </div>
+      <div class="xp-body">
+        
+        <!-- Header Banner -->
+        <div class="xp-banner" style="background: linear-gradient(to right, #e8f4fc, #f5faff); border-color: #72a7cf;">
+          <img src="assets/icons/qa_pos.png" style="width: 58px; height: 58px;" alt="POS Macro">
+          <div class="xp-banner-info">
+            <h2 style="color: #0b497b;">QA POS Automation Macro <span style="font-size: 11px; background: #0078d7; color: #fff; padding: 1px 6px; border-radius: 3px;">v2.6.0</span></h2>
+            <div class="role" style="color: #125ea2;">Suite portable de automatización de transacciones POS con macros</div>
+            <div class="meta">Plataforma: Windows POSReady / 10 / 11 &nbsp;|&nbsp; Licencia: MIT &nbsp;|&nbsp; Autor: Efraín Cortez</div>
+            <div style="margin-top: 8px; display: flex; gap: 8px;">
+              <a href="https://github.com/EfrainSN/QA-POS-Automation-Macro" target="_blank" class="xp-btn primary">
+                <img src="assets/icons/run.png" style="width: 14px; height: 14px;" alt=""> Ejecutar / Ver Código en GitHub
+              </a>
+              <a href="https://github.com/EfrainSN/QA-POS-Automation-Macro/releases" target="_blank" class="xp-btn">
+                Descargas & Releases (.exe)
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ¿Qué es y qué hace? -->
+        <fieldset class="xp-group">
+          <legend>¿Qué es y qué hace?</legend>
+          <p style="line-height: 1.45; font-size: 11px; color: #222; margin-bottom: 6px;">
+            Es una <strong>suite portable y modular</strong> creada para optimizar y automatizar la ejecución de transacciones complejas en terminales de Punto de Venta (<strong>POS</strong>) en entornos de retail y comercio.
+          </p>
+          <p style="line-height: 1.45; font-size: 11px; color: #222;">
+            Opera mediante <strong>emulación de teclado e inyección de eventos a nivel de sistema operativo con latencia ultra-baja</strong>, eliminando los errores humanos en pruebas manuales repetitivas y permitiendo ejecutar flujos continuos de venta, cobros, devoluciones y validaciones transaccionales. Además, cuenta con una interfaz retro inspirada en Windows Vista Aero Glass.
+          </p>
+        </fieldset>
+
+        <!-- Tecnologías -->
+        <fieldset class="xp-group">
+          <legend>Tecnologías y Stack Utilizado</legend>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px;">
+            <span class="xp-btn" style="font-weight: bold; background: #eef6ff;">AutoHotkey v2.0</span>
+            <span class="xp-btn" style="font-weight: bold; background: #eef6ff;">Windows API (Keystroke Injection)</span>
+            <span class="xp-btn" style="background: #eef6ff;">Windows Vista Aero Glass UI</span>
+            <span class="xp-btn" style="background: #eef6ff;">Oracle Xstore POS</span>
+            <span class="xp-btn" style="background: #eef6ff;">Omnipay Pasarelas</span>
+            <span class="xp-btn" style="background: #eef6ff;">Windows POSReady / Win 10 / Win 11</span>
+          </div>
+        </fieldset>
+
+        <!-- Casos de Uso y Capacidades -->
+        <fieldset class="xp-group">
+          <legend>Capacidades y Flujos de Automatización</legend>
+          <ul style="padding-left: 18px; margin: 4px 0; line-height: 1.4; font-size: 11px;">
+            <li><strong>Emulación de baja latencia</strong>: Ejecución rápida y precisa de atajos de teclado y secuencias POS nativas.</li>
+            <li><strong>Pruebas de estrés y regresión</strong>: Capacidad de disparar ráfagas transaccionales para validar la estabilidad del hardware y software de caja.</li>
+            <li><strong>Flujos multitarjeta y anulación</strong>: Simulación de ventas con tarjetas de crédito/débito, cancelaciones y reintentos.</li>
+            <li><strong>Portabilidad absoluta</strong>: No requiere instalación ni permisos de administrador complejos para correr en terminales POS.</li>
+          </ul>
+        </fieldset>
+
+      </div>
+      <div class="xp-statusbar">
+        <span class="xp-status-col">Estado: Compilación v2.6.0 activa</span>
+        <span>Código disponible en GitHub</span>
+      </div>
+    </div>
+
+
+    <!-- ==================== WINDOW 10: QA SUITE XRAY .EXE ==================== -->
+    <div class="xp-window" id="win-qa-xray" data-title="QA_Suite_Xray.exe" data-icon="assets/icons/qa_xray.png" style="width: 650px; height: 530px; left: 270px; top: 90px;">
+      <div class="xp-titlebar">
+        <div class="xp-titlebar-title">
+          <img src="assets/icons/qa_xray.png" alt="">
+          <span>QA_Suite_Xray.exe - Gestor y Generador de Casos de Prueba (Jira & Xray)</span>
+        </div>
+        <div class="xp-titlebar-controls">
+          <button class="xp-control-btn" onclick="minimizeWindow('win-qa-xray')">_</button>
+          <button class="xp-control-btn" onclick="maximizeWindow('win-qa-xray')">□</button>
+          <button class="xp-control-btn close" onclick="closeWindow('win-qa-xray')">✕</button>
+        </div>
+      </div>
+      <div class="xp-menubar">
+        <span class="xp-menu-item">Archivo</span>
+        <span class="xp-menu-item">Plantillas</span>
+        <span class="xp-menu-item">Exportar</span>
+        <span class="xp-menu-item">Ayuda</span>
+      </div>
+      <div class="xp-addressbar">
+        <span class="xp-address-label">Ubicación</span>
+        <div class="xp-address-input">
+          <img src="assets/icons/qa_xray.png" alt="">
+          <span>C:\Archivos_de_programa\QA_Automation\QA_Suite_Xray.exe</span>
+        </div>
+        <a href="https://github.com/EfrainSN/QA-Suite-Xray" target="_blank" class="xp-btn primary" style="text-decoration:none;">
+          <img src="assets/icons/ie.png" style="width:14px;height:14px;" alt=""> Repositorio GitHub ➔
+        </a>
+      </div>
+      <div class="xp-body">
+        
+        <!-- Header Banner -->
+        <div class="xp-banner" style="background: linear-gradient(to right, #eaf2ff, #f6f9ff); border-color: #648ec1;">
+          <img src="assets/icons/qa_xray.png" style="width: 58px; height: 58px;" alt="QA Suite Xray">
+          <div class="xp-banner-info">
+            <h2 style="color: #0b347b;">QA Suite Xray <span style="font-size: 11px; background: #0052cc; color: #fff; padding: 1px 6px; border-radius: 3px;">v1.0</span></h2>
+            <div class="role" style="color: #0055ea;">Estructuración y exportación inteligente de casos de prueba para Jira Xray</div>
+            <div class="meta">Integración: Atlassian Jira & Xray Test Management &nbsp;|&nbsp; Autor: Efraín Cortez</div>
+            <div style="margin-top: 8px; display: flex; gap: 8px;">
+              <a href="https://github.com/EfrainSN/QA-Suite-Xray" target="_blank" class="xp-btn primary">
+                <img src="assets/icons/run.png" style="width: 14px; height: 14px;" alt=""> Ver Código Fuente en GitHub
+              </a>
+              <button class="xp-btn" onclick="openWindow('win-experience')">
+                Ver aplicación en JM Technologies
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ¿Qué es y qué hace? -->
+        <fieldset class="xp-group">
+          <legend>¿Qué es y qué hace?</legend>
+          <p style="line-height: 1.45; font-size: 11px; color: #222; margin-bottom: 6px;">
+            Es una <strong>aplicación de escritorio</strong> diseñada para preparar, redactar y organizar casos de prueba manuales de sistemas transaccionales como <strong>Oracle Xstore</strong> y pasarelas <strong>Omnipay</strong>, automatizando su conversión y exportación en un formato <strong>CSV normalizado</strong> listo para importarse directamente en Jira mediante la extensión <strong>Xray</strong>.
+          </p>
+          <p style="line-height: 1.45; font-size: 11px; color: #222;">
+            Resuelve el cuello de botella de tener que redactar manualmente los mismos pasos y adaptar los datos a la plantilla que exige Xray para cada historia de usuario, garantizando consistencia, eliminando duplicados y acelerando la fase de diseño de pruebas en un 70%.
+          </p>
+        </fieldset>
+
+        <!-- Tecnologías -->
+        <fieldset class="xp-group">
+          <legend>Tecnologías y Stack Utilizado</legend>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px;">
+            <span class="xp-btn" style="font-weight: bold; background: #eef6ff;">Python Desktop App</span>
+            <span class="xp-btn" style="font-weight: bold; background: #eef6ff;">Atlassian Jira Software</span>
+            <span class="xp-btn" style="font-weight: bold; background: #eef6ff;">Xray Test Management</span>
+            <span class="xp-btn" style="background: #eef6ff;">CSV Normalized Data Engine</span>
+            <span class="xp-btn" style="background: #eef6ff;">Oracle Xstore POS</span>
+            <span class="xp-btn" style="background: #eef6ff;">Omnipay Gateway Integration</span>
+          </div>
+        </fieldset>
+
+        <!-- Beneficios Clave -->
+        <fieldset class="xp-group">
+          <legend>Beneficios y Características Principales</legend>
+          <ul style="padding-left: 18px; margin: 4px 0; line-height: 1.4; font-size: 11px;">
+            <li><strong>Estandarización automática</strong>: Genera pasos de prueba, datos de entrada y resultados esperados uniformes.</li>
+            <li><strong>Validación previa</strong>: Comprueba que los campos mandatorios de Xray estén completos antes de generar el archivo final.</li>
+            <li><strong>Cero modificación directa de Jira</strong>: Trabaja 100% en local para que el analista QA valide antes de importar.</li>
+            <li><strong>Reducción de retrabajo</strong>: Reutilización ágil de plantillas para transacciones POS complejas.</li>
+          </ul>
+        </fieldset>
+
+      </div>
+      <div class="xp-statusbar">
+        <span class="xp-status-col">Módulo: Generador CSV Jira/Xray</span>
+        <span>Listo</span>
+      </div>
+    </div>
+
+
     <!-- ==================== BALLOON NOTIFICATION ==================== -->
     <div class="balloon-tip" id="welcome-balloon">
       <div class="balloon-header">
@@ -989,6 +1216,22 @@ Disponibles bajo solicitud.
           <div class="start-item-texts">
             <span class="start-item-title">Currículum PDF</span>
             <span class="start-item-desc">Abrir en Google Drive</span>
+          </div>
+        </div>
+
+        <div class="start-item" data-action="open-window" data-target="win-qa-pos">
+          <img src="assets/icons/qa_pos.png" alt="">
+          <div class="start-item-texts">
+            <span class="start-item-title">QA_POS_Macro.exe</span>
+            <span class="start-item-desc">Suite de macros POS (Vista Aero)</span>
+          </div>
+        </div>
+
+        <div class="start-item" data-action="open-window" data-target="win-qa-xray">
+          <img src="assets/icons/qa_xray.png" alt="">
+          <div class="start-item-texts">
+            <span class="start-item-title">QA_Suite_Xray.exe</span>
+            <span class="start-item-desc">Casos de prueba para Jira / Xray</span>
           </div>
         </div>
 
