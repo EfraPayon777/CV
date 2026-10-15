@@ -2,107 +2,1160 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio - Efraín Cortez</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Efraín Cortez - CV Windows XP Edition</title>
+  <meta name="description" content="Portafolio y Currículum Vitae interactivo de Efraín Antonio Cortez Claros, Analista QA, Automatización e Integraciones con diseño nostálgico de Windows XP.">
+  <meta name="keywords" content="Efrain Cortez, QA, Quality Assurance, Tester, Automatizacion, Python, APIs, Postman, SQL, Windows XP, CV">
+  <link rel="icon" type="image/png" href="assets/icons/computer.png">
+  <link rel="stylesheet" href="xp.css">
   <link rel="stylesheet" href="style.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
-  <!-- Video de fondo -->
-  <div class="video-container">
-    <video autoplay loop muted plays-inline class="back-vid">
-      <source src="images/galaxy.mp4" type="video/mp4">
-    </video>
-  </div>
+  <!-- Windows XP Desktop -->
+  <main class="desktop" id="desktop">
+    
+    <!-- Selection Marquee Box -->
+    <div class="selection-marquee" id="selection-marquee"></div>
 
-  <section class="main-section">
-    <nav>
-      <h1 data-aos="zoom-in" data-aos-duration="1000">
-        <span style="color: #4acfee;">Efraín</span> Cortez
-      </h1>
-
-      <!-- Menú hamburguesa -->
-      <div class="menu-toggle" id="menu-toggle">
-        <i class='bx bx-menu'></i>
+    <!-- Desktop Icons Grid -->
+    <div class="desktop-icons" id="desktop-icons">
+      
+      <!-- 1. Mi PC (Sobre Mí / Presentación) -->
+      <div class="desktop-icon" data-action="open-window" data-target="win-about" tabindex="0" title="Mi PC (Sobre Mí y Presentación)">
+        <div class="icon-img-wrapper">
+          <img src="assets/icons/computer.png" alt="Mi PC">
+        </div>
+        <span class="icon-label">Mi PC (Sobre Mí)</span>
       </div>
 
-      <ul class="nav-links" id="nav-links">
-        <li><a class="active" href="#" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200">Inicio</a></li>
-        <li><a href="vista_habilidades.html" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400">Habilidades</a></li>
-        <li><a href="https://cortezefrainlis.wuaze.com" target="_blank" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="600">Proyectos</a></li>
-      </ul>
-    </nav>
+      <!-- 2. Habilidades Técnicas -->
+      <div class="desktop-icon" data-action="open-window" data-target="win-skills" tabindex="0" title="Panel de Control (Habilidades Técnicas)">
+        <div class="icon-img-wrapper">
+          <img src="assets/icons/control_panel.png" alt="Habilidades">
+        </div>
+        <span class="icon-label">Habilidades</span>
+      </div>
 
-    <div class="hero">
-      <div class="hero-info">
-        <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Hola, mi nombre es Efraín Cortez</h1>
-        <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">Soy desarrollador </h2>
-        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">
-          Soy estudiante de ultimo año de Ingeniería en Ciencias de la Computación, con una fuerte pasión por la tecnología y el desarrollo de soluciones innovadoras. Me considero una persona proactiva y siempre disponible para enfrentar nuevos retos, lo que me permite aprender rápidamente y adaptarme a entornos dinámicos. A lo largo de mis estudios, he adquirido experiencia en diversas áreas de la programación y el desarrollo de software, y me he enfrentado a proyectos que han fortalecido mis habilidades técnicas y mi capacidad para trabajar en equipo.
-        </p>
+      <!-- 3. Experiencia Laboral -->
+      <div class="desktop-icon" data-action="open-window" data-target="win-experience" tabindex="0" title="Mis Documentos (Experiencia Laboral)">
+        <div class="icon-img-wrapper">
+          <img src="assets/icons/folder.png" alt="Experiencia">
+        </div>
+        <span class="icon-label">Experiencia</span>
+      </div>
 
-        <div class="Buttons">
-          <a href="https://wa.me/50360057601" target="_blank">
-            <button class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100">Contáctame</button>
-          </a>
+      <!-- 4. Educación y Certificaciones -->
+      <div class="desktop-icon" data-action="open-window" data-target="win-education" tabindex="0" title="Educación y Certificaciones">
+        <div class="icon-img-wrapper">
+          <img src="assets/icons/certificate.png" alt="Certificados">
+        </div>
+        <span class="icon-label">Educación & Certificados</span>
+      </div>
 
-          <ul class="ul-icons">
-            <li>
-              <a href="https://github.com/EfraPayon777" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
-                <i class='bx bxl-github'></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://drive.google.com/file/d/1xREXvrit1urbV5IWK61hXDLEQgHqCIJA/view?usp=sharing" target="_blank" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
-                <i class='bx bx-envelope'></i>
-              </a>
-            </li>
-          </ul>
+      <!-- 5. Resumen Profesional TXT -->
+      <div class="desktop-icon" data-action="open-window" data-target="win-notepad" tabindex="0" title="Resumen_Profesional.txt">
+        <div class="icon-img-wrapper">
+          <img src="assets/icons/document.png" alt="Resumen">
+        </div>
+        <span class="icon-label">Resumen.txt</span>
+      </div>
+
+      <!-- 6. Currículum PDF en Google Drive -->
+      <div class="desktop-icon" data-action="open-window" data-target="win-drive" tabindex="0" title="Currículum PDF (Google Drive)">
+        <div class="icon-img-wrapper">
+          <img src="assets/icons/wordpad.png" alt="CV Drive">
+          <span class="shortcut-badge"></span>
+        </div>
+        <span class="icon-label">CV Drive.pdf</span>
+      </div>
+
+      <!-- 7. Mi GitHub -->
+      <div class="desktop-icon" data-action="link" data-target="https://github.com/EfraPayon777" tabindex="0" title="Ir a mi perfil de GitHub">
+        <div class="icon-img-wrapper">
+          <img src="assets/icons/ie.png" alt="GitHub">
+          <span class="shortcut-badge"></span>
+        </div>
+        <span class="icon-label">Mi GitHub</span>
+      </div>
+
+      <!-- 8. WhatsApp Contacto -->
+      <div class="desktop-icon" data-action="open-window" data-target="win-msn" tabindex="0" title="Contactarme por WhatsApp / MSN">
+        <div class="icon-img-wrapper">
+          <img src="assets/icons/msn.png" alt="WhatsApp">
+        </div>
+        <span class="icon-label">WhatsApp Contacto</span>
+      </div>
+
+      <!-- 9. Portafolio Web -->
+      <div class="desktop-icon" data-action="link" data-target="https://cortezefrainlis.wuaze.com" tabindex="0" title="Portafolio Web en vivo">
+        <div class="icon-img-wrapper">
+          <img src="assets/icons/media_center.png" alt="Portafolio">
+          <span class="shortcut-badge"></span>
+        </div>
+        <span class="icon-label">Portafolio Web</span>
+      </div>
+
+      <!-- 10. Papelera de reciclaje -->
+      <div class="desktop-icon" data-action="recycle" tabindex="0" title="Papelera de reciclaje (Defectos y Bugs Resueltos)">
+        <div class="icon-img-wrapper">
+          <img src="assets/icons/recycle_full.png" id="desktop-recycle-icon" alt="Papelera">
+        </div>
+        <span class="icon-label">Papelera de reciclaje</span>
+      </div>
+
+    </div>
+
+    <!-- ==================== WINDOW 1: SOBRE MÍ (MI PC) ==================== -->
+    <div class="xp-window active" id="win-about" data-title="Mi PC - Efraín Cortez" data-icon="assets/icons/computer.png" style="width: 660px; height: 530px; left: 180px; top: 30px; display: flex;">
+      <div class="xp-titlebar">
+        <div class="xp-titlebar-title">
+          <img src="assets/icons/computer.png" alt="">
+          <span>Mi PC - Propiedades de Efraín Antonio Cortez Claros</span>
+        </div>
+        <div class="xp-titlebar-controls">
+          <button class="xp-control-btn" onclick="minimizeWindow('win-about')" title="Minimizar">_</button>
+          <button class="xp-control-btn" onclick="maximizeWindow('win-about')" title="Maximizar">□</button>
+          <button class="xp-control-btn close" onclick="closeWindow('win-about')" title="Cerrar">✕</button>
         </div>
       </div>
+      <div class="xp-menubar">
+        <span class="xp-menu-item">Archivo</span>
+        <span class="xp-menu-item">Edición</span>
+        <span class="xp-menu-item">Ver</span>
+        <span class="xp-menu-item">Favoritos</span>
+        <span class="xp-menu-item">Herramientas</span>
+        <span class="xp-menu-item">Ayuda</span>
+      </div>
+      <div class="xp-addressbar">
+        <span class="xp-address-label">Dirección</span>
+        <div class="xp-address-input">
+          <img src="assets/icons/computer.png" alt="">
+          <span>C:\Efraín_Cortez\Sobre_Mí</span>
+        </div>
+        <button class="xp-go-btn" onclick="openWindow('win-skills')">Ir a Habilidades ➔</button>
+      </div>
+      <div class="xp-body">
+        
+        <!-- Header Banner with Photo -->
+        <div class="xp-banner">
+          <img src="assets/profile.png" alt="Efraín Cortez" class="xp-banner-photo" onerror="this.src='assets/avatar.png'">
+          <div class="xp-banner-info">
+            <h2>Efraín Antonio Cortez Claros</h2>
+            <div class="role">Analista QA | Automatización e Integraciones</div>
+            <div class="meta">📍 El Salvador &nbsp;|&nbsp; 📞 +503 60057601 &nbsp;|&nbsp; ✉️ efraincortez777@gmail.com</div>
+            <div style="margin-top: 8px; display: flex; gap: 8px;">
+              <a href="https://wa.me/50360057601" target="_blank" class="xp-btn primary">
+                <img src="assets/icons/phone.png" style="width: 14px; height: 14px;" alt=""> Contactar por WhatsApp
+              </a>
+              <a href="https://drive.google.com/file/d/14z8-fCVt2aD1nbwbrG-eAYZ2CMYy4hVZ/view" target="_blank" class="xp-btn">
+                <img src="assets/icons/wordpad.png" style="width: 14px; height: 14px;" alt=""> Ver CV en Drive
+              </a>
+            </div>
+          </div>
+        </div>
 
-      <div class="hero-img" data-aos="zoom-in-left" data-aos-duration="2500">
-        <img src="images/Diseño sin título (59) (1).png" alt="person-img">
+        <!-- Resumen Profesional Group -->
+        <fieldset class="xp-group">
+          <legend>Resumen Profesional</legend>
+          <p style="line-height: 1.5; font-size: 11px; color: #222;">
+            Ingeniero en Ciencias de la Computación y profesional QA con experiencia en el Ciclo de Vida del Desarrollo de Software (SDLC), metodologías ágiles, diseño de pruebas, validación de APIs, análisis de datos y automatización.
+          </p>
+          <p style="line-height: 1.5; font-size: 11px; color: #222; margin-top: 6px;">
+            Soy una persona proactiva, con gran capacidad de aprendizaje y adaptación a nuevas tecnologías. Me apasiona optimizar sistemas y crear soluciones innovadoras. Busco una oportunidad para aplicar mis conocimientos, crecer profesionalmente y aportar valor a su equipo.
+          </p>
+        </fieldset>
+
+        <!-- Información del Sistema -->
+        <fieldset class="xp-group">
+          <legend>Especificaciones del Perfil Profesional</legend>
+          <table style="width: 100%; border-collapse: collapse; font-size: 11px;">
+            <tr style="border-bottom: 1px dotted #ccc;">
+              <td style="padding: 4px; font-weight: bold; width: 140px; color: #003399;">Rol Principal:</td>
+              <td style="padding: 4px;">Analista QA / Quality Assurance Engineer</td>
+            </tr>
+            <tr style="border-bottom: 1px dotted #ccc;">
+              <td style="padding: 4px; font-weight: bold; color: #003399;">Especialidad:</td>
+              <td style="padding: 4px;">Pruebas Funcionales, APIs, Regresión, Automatización & SQL</td>
+            </tr>
+            <tr style="border-bottom: 1px dotted #ccc;">
+              <td style="padding: 4px; font-weight: bold; color: #003399;">Formación Académica:</td>
+              <td style="padding: 4px;">Ingeniería en Ciencias de la Computación - Universidad Don Bosco</td>
+            </tr>
+            <tr style="border-bottom: 1px dotted #ccc;">
+              <td style="padding: 4px; font-weight: bold; color: #003399;">Idiomas:</td>
+              <td style="padding: 4px;">Español (Nativo) &nbsp;|&nbsp; Inglés (Avanzado / Superior, Competencia Profesional)</td>
+            </tr>
+            <tr>
+              <td style="padding: 4px; font-weight: bold; color: #003399;">LinkedIn:</td>
+              <td style="padding: 4px;">
+                <a href="https://linkedin.com/in/efrain-cortez-55b573399" target="_blank" style="color: #0055ea; text-decoration: underline;">linkedin.com/in/efrain-cortez-55b573399</a>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+
+        <!-- Botones de Acción -->
+        <div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 10px;">
+          <button class="xp-btn" onclick="openWindow('win-skills')">
+            <img src="assets/icons/control_panel.png" style="width:14px; height:14px;" alt=""> Ver Habilidades
+          </button>
+          <button class="xp-btn" onclick="openWindow('win-experience')">
+            <img src="assets/icons/folder.png" style="width:14px; height:14px;" alt=""> Ver Experiencia
+          </button>
+          <button class="xp-btn" onclick="openWindow('win-education')">
+            <img src="assets/icons/certificate.png" style="width:14px; height:14px;" alt=""> Certificaciones
+          </button>
+        </div>
+
+      </div>
+      <div class="xp-statusbar">
+        <span class="xp-status-col">Estado: En línea</span>
+        <span class="xp-status-col">Listo</span>
+        <span>Zona horaria: El Salvador</span>
       </div>
     </div>
 
-    <!-- Sección de información -->
-    <div class="info-sec">
-      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1600">
-        <h1>HTML</h1>
-        <p>CSS <br> JS</p>
+
+    <!-- ==================== WINDOW 2: HABILIDADES TÉCNICAS (PANEL DE CONTROL) ==================== -->
+    <div class="xp-window" id="win-skills" data-title="Panel de Control - Habilidades" data-icon="assets/icons/control_panel.png" style="width: 660px; height: 520px; left: 180px; top: 60px;">
+      <div class="xp-titlebar">
+        <div class="xp-titlebar-title">
+          <img src="assets/icons/control_panel.png" alt="">
+          <span>Panel de Control - Habilidades Técnicas y QA</span>
+        </div>
+        <div class="xp-titlebar-controls">
+          <button class="xp-control-btn" onclick="minimizeWindow('win-skills')">_</button>
+          <button class="xp-control-btn" onclick="maximizeWindow('win-skills')">□</button>
+          <button class="xp-control-btn close" onclick="closeWindow('win-skills')">✕</button>
+        </div>
       </div>
-      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1700">
-        <h1>PHP</h1>
-        <p>SQL <br> MYSQL</p>
+      <div class="xp-menubar">
+        <span class="xp-menu-item">Archivo</span>
+        <span class="xp-menu-item">Edición</span>
+        <span class="xp-menu-item">Ver</span>
+        <span class="xp-menu-item">Favoritos</span>
+        <span class="xp-menu-item">Ayuda</span>
       </div>
-      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1800">
-        <h1>OFFICE</h1>
-        <p>365<br> </p>
+      <div class="xp-addressbar">
+        <span class="xp-address-label">Dirección</span>
+        <div class="xp-address-input">
+          <img src="assets/icons/control_panel.png" alt="">
+          <span>Panel de control\Habilidades_Profesionales</span>
+        </div>
       </div>
-      <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1900">
-        <h1>Soporte</h1>
-        <p>Hardware <br> Software</p>
+      <div class="xp-body">
+        
+        <!-- XP Tab Header -->
+        <div class="xp-tabs-header">
+          <button class="xp-tab-btn active" data-tab="tab-qa">QA & Pruebas</button>
+          <button class="xp-tab-btn" data-tab="tab-api">APIs & Automatización</button>
+          <button class="xp-tab-btn" data-tab="tab-data">Datos & DevOps</button>
+          <button class="xp-tab-btn" data-tab="tab-complementary">Complementarias & Niveles</button>
+        </div>
+
+        <!-- XP Tab Content -->
+        <div class="xp-tab-content">
+          
+          <!-- TAB 1: QA & Pruebas -->
+          <div class="tab-pane active" id="tab-qa">
+            <div class="skills-grid">
+              
+              <div class="skill-category-card">
+                <h3><img src="assets/icons/security.png" style="width:16px;height:16px;" alt=""> Metodología & Ciclo QA</h3>
+                <ul>
+                  <li><strong>SDLC & STLC</strong>: Comprensión rigurosa de todas las fases del ciclo de vida del software y de pruebas.</li>
+                  <li><strong>Diseño de Pruebas</strong>: Elaboración de matrices, escenarios y casos de prueba detallados con criterios de aceptación.</li>
+                  <li><strong>Metodologías Ágiles</strong>: Trabajo colaborativo bajo marco Scrum, sprints y entregas continuas.</li>
+                </ul>
+              </div>
+
+              <div class="skill-category-card">
+                <h3><img src="assets/icons/system_info.png" style="width:16px;height:16px;" alt=""> Tipos de Pruebas</h3>
+                <ul>
+                  <li><strong>Pruebas Funcionales</strong>: Validación exhaustiva de requerimientos de negocio y flujos de usuario.</li>
+                  <li><strong>Pruebas de Regresión</strong>: Verificación de estabilidad tras implementaciones y cambios de código.</li>
+                  <li><strong>Smoke Testing & Exploratorias</strong>: Detección temprana de anomalías y casos borde.</li>
+                  <li><strong>Pruebas End-to-End</strong>: Validación completa de integraciones y recorridos transaccionales.</li>
+                </ul>
+              </div>
+
+              <div class="skill-category-card" style="grid-column: 1 / -1;">
+                <h3><img src="assets/icons/help.png" style="width:16px;height:16px;" alt=""> Gestión de Defectos & Logs</h3>
+                <ul>
+                  <li><strong>Jira & Atlassian</strong>: Reporte profesional, priorización de severidad y seguimiento de ciclo de vida de bugs con evidencias.</li>
+                  <li><strong>Análisis de Causa Raíz</strong>: Rastreo de discrepancias mediante la lectura y análisis de logs de aplicación y del servidor.</li>
+                  <li><strong>Documentación Técnica</strong>: Elaboración de reportes de ejecución de pruebas y guías de validación.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- TAB 2: APIs & Automatización -->
+          <div class="tab-pane" id="tab-api">
+            <div class="skills-grid">
+              
+              <div class="skill-category-card">
+                <h3><img src="assets/icons/ie.png" style="width:16px;height:16px;" alt=""> Pruebas de APIs & Microservicios</h3>
+                <ul>
+                  <li><strong>Herramientas</strong>: Postman y SoapUI para pruebas automatizadas y manuales de endpoints.</li>
+                  <li><strong>Especificaciones</strong>: Swagger / OpenAPI para análisis de contratos y payloads.</li>
+                  <li><strong>Protocolos & Formatos</strong>: Arquitecturas REST, validación de schemas JSON, payloads XML y códigos de respuesta HTTP.</li>
+                  <li><strong>Validación de Reglas de Negocio</strong>: Verificación de headers, tokens de autenticación y lógica backend.</li>
+                </ul>
+              </div>
+
+              <div class="skill-category-card">
+                <h3><img src="assets/icons/run.png" style="width:16px;height:16px;" alt=""> Automatización de Pruebas</h3>
+                <ul>
+                  <li><strong>Python</strong>: Creación de scripts automatizados para ejecución recurrente de flujos de prueba.</li>
+                  <li><strong>Selenium</strong>: Automatización de navegación web y validación de componentes UI.</li>
+                  <li><strong>Cypress</strong>: Framework moderno para testing end-to-end de aplicaciones web.</li>
+                  <li><strong>JMeter</strong>: Conocimientos en diseño y ejecución de pruebas de carga y rendimiento de servicios.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- TAB 3: Datos & DevOps -->
+          <div class="tab-pane" id="tab-data">
+            <div class="skills-grid">
+              
+              <div class="skill-category-card">
+                <h3><img src="assets/icons/computer.png" style="width:16px;height:16px;" alt=""> Bases de Datos & Validación</h3>
+                <ul>
+                  <li><strong>Oracle SQL</strong>: Verificación de reglas de negocio, consistencia transaccional y consultas complejas.</li>
+                  <li><strong>SQL Server</strong>: Consultas Transact-SQL avanzadas, joins, subconsultas y verificación de integridad referencial.</li>
+                  <li><strong>MySQL</strong>: Optimización de consultas, diseño y gestión de esquemas relacionales.</li>
+                </ul>
+              </div>
+
+              <div class="skill-category-card">
+                <h3><img src="assets/icons/control_panel.png" style="width:16px;height:16px;" alt=""> DevOps, Servidores & Negocio</h3>
+                <ul>
+                  <li><strong>Control de Versiones</strong>: Git y GitHub para control de código y flujo de ramas.</li>
+                  <li><strong>CI/CD & Contenedores</strong>: Conocimientos en GitHub Actions, Docker y despliegues.</li>
+                  <li><strong>Sistemas Operativos</strong>: Linux y administración de Ubuntu Server.</li>
+                  <li><strong>Dominio de Negocio</strong>: Sistemas transaccionales, gestión de órdenes, procesos comerciales y pasarelas de pago.</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- TAB 4: Complementarias & Niveles -->
+          <div class="tab-pane" id="tab-complementary">
+            
+            <div style="margin-bottom: 14px;">
+              <fieldset class="xp-group">
+                <legend>Herramientas Complementarias</legend>
+                <div style="display: flex; flex-wrap: wrap; gap: 6px;">
+                  <span class="xp-btn">HTML5 / CSS3 / JavaScript</span>
+                  <span class="xp-btn">PHP</span>
+                  <span class="xp-btn">Microsoft Azure</span>
+                  <span class="xp-btn">Power BI</span>
+                  <span class="xp-btn">SharePoint</span>
+                  <span class="xp-btn">Office 365</span>
+                  <span class="xp-btn">Soporte Hardware & Software</span>
+                </div>
+              </fieldset>
+            </div>
+
+            <fieldset class="xp-group">
+              <legend>Progreso y Dominio de Habilidades</legend>
+              
+              <div class="skill-prog-row">
+                <div class="skill-prog-label">
+                  <span>QA Manual & Metodología de Pruebas (SDLC/STLC)</span>
+                  <span>95%</span>
+                </div>
+                <div class="xp-progress-bar">
+                  <div class="xp-progress-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-prog-row">
+                <div class="skill-prog-label">
+                  <span>Pruebas de APIs (Postman, SoapUI, REST, JSON)</span>
+                  <span>90%</span>
+                </div>
+                <div class="xp-progress-bar">
+                  <div class="xp-progress-fill" style="width: 90%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-prog-row">
+                <div class="skill-prog-label">
+                  <span>Bases de Datos & SQL (Oracle SQL, SQL Server, MySQL)</span>
+                  <span>88%</span>
+                </div>
+                <div class="xp-progress-bar">
+                  <div class="xp-progress-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-prog-row">
+                <div class="skill-prog-label">
+                  <span>Automatización (Python, Selenium, Cypress)</span>
+                  <span>82%</span>
+                </div>
+                <div class="xp-progress-bar">
+                  <div class="xp-progress-fill" style="width: 82%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-prog-row">
+                <div class="skill-prog-label">
+                  <span>Idioma Inglés (Competencia Profesional Avanzada)</span>
+                  <span>88%</span>
+                </div>
+                <div class="xp-progress-bar">
+                  <div class="xp-progress-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-prog-row">
+                <div class="skill-prog-label">
+                  <span>Desarrollo Web & Cloud (HTML/CSS/JS/PHP/Azure)</span>
+                  <span>85%</span>
+                </div>
+                <div class="xp-progress-bar">
+                  <div class="xp-progress-fill" style="width: 85%;"></div>
+                </div>
+              </div>
+
+            </fieldset>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="xp-statusbar">
+        <span class="xp-status-col">4 pestañas disponibles</span>
+        <span>Habilidades cargadas correctamente</span>
       </div>
     </div>
-  </section>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 
-  <!-- Script para el menú hamburguesa -->
-  <script>
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
+    <!-- ==================== WINDOW 3: EXPERIENCIA LABORAL (MIS DOCUMENTOS) ==================== -->
+    <div class="xp-window" id="win-experience" data-title="Mis Documentos - Experiencia" data-icon="assets/icons/folder.png" style="width: 640px; height: 490px; left: 220px; top: 80px;">
+      <div class="xp-titlebar">
+        <div class="xp-titlebar-title">
+          <img src="assets/icons/folder.png" alt="">
+          <span>Mis Documentos - Trayectoria y Experiencia Laboral</span>
+        </div>
+        <div class="xp-titlebar-controls">
+          <button class="xp-control-btn" onclick="minimizeWindow('win-experience')">_</button>
+          <button class="xp-control-btn" onclick="maximizeWindow('win-experience')">□</button>
+          <button class="xp-control-btn close" onclick="closeWindow('win-experience')">✕</button>
+        </div>
+      </div>
+      <div class="xp-menubar">
+        <span class="xp-menu-item">Archivo</span>
+        <span class="xp-menu-item">Edición</span>
+        <span class="xp-menu-item">Ver</span>
+        <span class="xp-menu-item">Favoritos</span>
+        <span class="xp-menu-item">Ayuda</span>
+      </div>
+      <div class="xp-addressbar">
+        <span class="xp-address-label">Dirección</span>
+        <div class="xp-address-input">
+          <img src="assets/icons/folder.png" alt="">
+          <span>C:\Efraín_Cortez\Experiencia_Profesional</span>
+        </div>
+      </div>
+      <div class="xp-body">
+        
+        <div class="exp-timeline">
+          
+          <!-- Puesto 1: JM Technologies -->
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Ingeniero de QA</div>
+                <div class="exp-company">@ JM Technologies</div>
+              </div>
+              <div class="exp-date">2026 – Presente</div>
+            </div>
+            <ul>
+              <li><strong>Ciclo de pruebas</strong>: Elaboración de escenarios, casos de prueba y evidencias; ejecución de pruebas funcionales, de integración y regresión; reporte y seguimiento de defectos en Jira.</li>
+              <li><strong>Calidad de software</strong>: Análisis, diseño y ejecución de casos de uso complejos. Validación rigurosa de reglas de negocio mediante la inspección de payloads JSON y XML.</li>
+              <li><strong>Integraciones y pruebas backend</strong>: Validación de APIs y microservicios con Postman y SoapUI. Rastreo de discrepancias mediante el análisis continuo de logs de aplicación.</li>
+              <li><strong>Validación de datos</strong>: Verificación de reglas de negocio, consistencia de transacciones e integridad de datos mediante consultas avanzadas en Oracle SQL.</li>
+              <li><strong>Automatización</strong>: Desarrollo de scripts automatizados en Python para optimizar la ejecución de flujos de prueba recurrentes.</li>
+            </ul>
+            <div style="margin-top: 8px; display: flex; gap: 4px; flex-wrap: wrap;">
+              <span class="xp-btn" style="font-size: 10px;">Jira</span>
+              <span class="xp-btn" style="font-size: 10px;">Postman</span>
+              <span class="xp-btn" style="font-size: 10px;">SoapUI</span>
+              <span class="xp-btn" style="font-size: 10px;">Python</span>
+              <span class="xp-btn" style="font-size: 10px;">Oracle SQL</span>
+              <span class="xp-btn" style="font-size: 10px;">JSON / XML</span>
+            </div>
+          </div>
 
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  </script>
+          <!-- Puesto 2: ISA El Salvador -->
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Webmaster</div>
+                <div class="exp-company">@ ISA El Salvador</div>
+              </div>
+              <div class="exp-date">2025 – 2026</div>
+            </div>
+            <ul>
+              <li><strong>Métricas y Tráfico</strong>: Análisis e interpretación de estadísticas de tráfico web y rendimiento en redes sociales para optimización de conversiones.</li>
+              <li><strong>Inteligencia Artificial</strong>: Implementación de soluciones de Inteligencia Artificial y Chatbots orientados al servicio al cliente y resolución automatizada.</li>
+              <li><strong>Desarrollo y Hosting</strong>: Desarrollo y mantenimiento de gestor documental de proyectos utilizando PHP, MySQL y administración integral de servicios de hosting.</li>
+            </ul>
+            <div style="margin-top: 8px; display: flex; gap: 4px; flex-wrap: wrap;">
+              <span class="xp-btn" style="font-size: 10px;">PHP</span>
+              <span class="xp-btn" style="font-size: 10px;">Chatbots & AI</span>
+              <span class="xp-btn" style="font-size: 10px;">Hosting & Servers</span>
+              <span class="xp-btn" style="font-size: 10px;">Analytics</span>
+            </div>
+          </div>
 
+        </div>
+
+      </div>
+      <div class="xp-statusbar">
+        <span class="xp-status-col">2 puestos profesionales registrados</span>
+        <span>Listo</span>
+      </div>
+    </div>
+
+
+    <!-- ==================== WINDOW 4: EDUCACIÓN & CERTIFICADOS ==================== -->
+    <div class="xp-window" id="win-education" data-title="Educación y Certificaciones" data-icon="assets/icons/certificate.png" style="width: 580px; height: 480px; left: 260px; top: 100px;">
+      <div class="xp-titlebar">
+        <div class="xp-titlebar-title">
+          <img src="assets/icons/certificate.png" alt="">
+          <span>Certificados y Formación Académica</span>
+        </div>
+        <div class="xp-titlebar-controls">
+          <button class="xp-control-btn" onclick="minimizeWindow('win-education')">_</button>
+          <button class="xp-control-btn" onclick="maximizeWindow('win-education')">□</button>
+          <button class="xp-control-btn close" onclick="closeWindow('win-education')">✕</button>
+        </div>
+      </div>
+      <div class="xp-menubar">
+        <span class="xp-menu-item">Archivo</span>
+        <span class="xp-menu-item">Ver</span>
+        <span class="xp-menu-item">Ayuda</span>
+      </div>
+      <div class="xp-body">
+        
+        <fieldset class="xp-group">
+          <legend>Formación Académica Universitaria</legend>
+          <div style="display: flex; gap: 12px; align-items: center; padding: 6px;">
+            <img src="assets/icons/certificate.png" style="width: 36px; height: 36px;" alt="">
+            <div>
+              <h3 style="font-size: 13px; color: #003399;">Ingeniería en Ciencias de la Computación</h3>
+              <p style="font-size: 11px; color: #444;">Universidad Don Bosco &nbsp;|&nbsp; <strong>2023 – Presente</strong></p>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="xp-group">
+          <legend>Certificaciones Oficiales y Cursos Especializados</legend>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            
+            <div style="display: flex; align-items: center; gap: 10px; border-bottom: 1px dashed #d0d0bf; padding-bottom: 6px;">
+              <img src="assets/icons/security.png" style="width: 22px; height: 22px;" alt="">
+              <div style="flex: 1;">
+                <div style="font-weight: bold; color: #002266;">Microsoft Certified: Azure Data Fundamentals</div>
+                <div style="color: #666; font-size: 10px;">Microsoft &nbsp;|&nbsp; Año 2025</div>
+              </div>
+              <span class="xp-btn" style="font-size: 10px;">Certificado</span>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 10px; border-bottom: 1px dashed #d0d0bf; padding-bottom: 6px;">
+              <img src="assets/icons/control_panel.png" style="width: 22px; height: 22px;" alt="">
+              <div style="flex: 1;">
+                <div style="font-weight: bold; color: #002266;">Data & Analytics: Power BI Specialization</div>
+                <div style="color: #666; font-size: 10px;">Especialización en análisis y modelado de datos &nbsp;|&nbsp; Año 2023</div>
+              </div>
+              <span class="xp-btn" style="font-size: 10px;">Certificado</span>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 10px; border-bottom: 1px dashed #d0d0bf; padding-bottom: 6px;">
+              <img src="assets/icons/computer.png" style="width: 22px; height: 22px;" alt="">
+              <div style="flex: 1;">
+                <div style="font-weight: bold; color: #002266;">Bases de Datos: Transact SQL Server Queries</div>
+                <div style="color: #666; font-size: 10px;">Consultas y procedimientos avanzados &nbsp;|&nbsp; Año 2023</div>
+              </div>
+              <span class="xp-btn" style="font-size: 10px;">Certificado</span>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 10px; border-bottom: 1px dashed #d0d0bf; padding-bottom: 6px;">
+              <img src="assets/icons/system_info.png" style="width: 22px; height: 22px;" alt="">
+              <div style="flex: 1;">
+                <div style="font-weight: bold; color: #002266;">Soporte IT: Reparación y Mantenimiento de Computadoras</div>
+                <div style="color: #666; font-size: 10px;">INSAFORP &nbsp;|&nbsp; Diagnóstico y arquitectura de hardware &nbsp;|&nbsp; Año 2023</div>
+              </div>
+              <span class="xp-btn" style="font-size: 10px;">Certificado</span>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <img src="assets/icons/help.png" style="width: 22px; height: 22px;" alt="">
+              <div style="flex: 1;">
+                <div style="font-weight: bold; color: #002266;">Idiomas: TOEIC Preparation Course / Inglés Superior</div>
+                <div style="color: #666; font-size: 10px;">Academia Europea &nbsp;|&nbsp; Nivel avanzado y competencia profesional &nbsp;|&nbsp; 2019 – 2022</div>
+              </div>
+              <span class="xp-btn" style="font-size: 10px;">Avanzado</span>
+            </div>
+
+          </div>
+        </fieldset>
+
+      </div>
+      <div class="xp-statusbar">
+        <span>5 certificaciones registradas</span>
+      </div>
+    </div>
+
+
+    <!-- ==================== WINDOW 5: RESUMEN PROFESIONAL TXT (BLOC DE NOTAS) ==================== -->
+    <div class="xp-window" id="win-notepad" data-title="Resumen_Profesional.txt - Bloc de notas" data-icon="assets/icons/notepad.png" style="width: 520px; height: 420px; left: 300px; top: 120px;">
+      <div class="xp-titlebar">
+        <div class="xp-titlebar-title">
+          <img src="assets/icons/notepad.png" alt="">
+          <span>Resumen_Profesional.txt - Bloc de notas</span>
+        </div>
+        <div class="xp-titlebar-controls">
+          <button class="xp-control-btn" onclick="minimizeWindow('win-notepad')">_</button>
+          <button class="xp-control-btn" onclick="maximizeWindow('win-notepad')">□</button>
+          <button class="xp-control-btn close" onclick="closeWindow('win-notepad')">✕</button>
+        </div>
+      </div>
+      <div class="xp-menubar">
+        <span class="xp-menu-item">Archivo</span>
+        <span class="xp-menu-item">Edición</span>
+        <span class="xp-menu-item">Formato</span>
+        <span class="xp-menu-item">Ver</span>
+        <span class="xp-menu-item">Ayuda</span>
+      </div>
+      <div class="xp-body" style="padding: 0;">
+        <textarea readonly style="width: 100%; height: 100%; border: none; outline: none; font-family: 'Lucida Console', 'Courier New', monospace; font-size: 12px; padding: 12px; line-height: 1.4; resize: none; background: #fff; color: #000;">
+======================================================================
+CURRICULUM VITAE - EFRAÍN ANTONIO CORTEZ CLAROS
+Analista QA | Automatización e Integraciones
+El Salvador · +503 60057601 · efraincortez777@gmail.com
+LinkedIn: linkedin.com/in/efrain-cortez-55b573399
+GitHub:   https://github.com/EfraPayon777
+CV Drive: https://drive.google.com/file/d/14z8-fCVt2aD1nbwbrG-eAYZ2CMYy4hVZ/view
+======================================================================
+
+[ RESUMEN PROFESIONAL ]
+Ingeniero en Ciencias de la Computación y profesional QA con
+experiencia en el Ciclo de Vida del Desarrollo de Software (SDLC),
+metodologías ágiles, diseño de pruebas, validación de APIs,
+análisis de datos y automatización.
+Soy proactivo, con gran capacidad de aprendizaje y adaptación
+a nuevas tecnologías. Me apasiona optimizar sistemas y crear
+soluciones innovadoras.
+
+[ HABILIDADES TÉCNICAS ]
+* QA: SDLC, STLC, casos de prueba, pruebas funcionales, regresión y exploratorias.
+* APIs: Postman, SoapUI, Swagger/OpenAPI, REST, JSON, XML y validación de respuestas.
+* Automatización: Python, Selenium, Cypress y JMeter.
+* Datos: Oracle SQL, SQL Server, validación de integridad y consultas complejas.
+* Gestión QA: Jira, gestión de defectos, evidencias y Scrum.
+* DevOps: Git, GitHub, GitHub Actions, Docker y Linux.
+* Negocio: Sistemas transaccionales, órdenes y pasarelas de pago.
+* Complementarias: HTML/CSS/JS, PHP, Azure, Power BI y SharePoint.
+
+[ EXPERIENCIA PROFESIONAL ]
+1. Ingeniero de QA @ JM Technologies (2026 – Presente)
+   - Ciclo de pruebas completo y gestión de defectos en Jira.
+   - Validación de reglas de negocio en payloads JSON y XML.
+   - Pruebas de microservicios con Postman y SoapUI.
+   - Análisis de logs de aplicación y consultas en Oracle SQL.
+   - Scripts automatizados en Python para flujos repetitivos.
+
+2. Webmaster @ ISA El Salvador (2025 – 2026)
+   - Análisis e interpretación de estadísticas de tráfico web.
+   - Chatbots y soluciones de Inteligencia Artificial para clientes.
+   - Desarrollo y mantenimiento de gestor documental en PHP.
+
+[ FORMACIÓN ACADÉMICA ]
+* Ingeniería en Ciencias de la Computación
+  Universidad Don Bosco (2023 – Presente)
+
+[ CERTIFICACIONES ]
+* Microsoft Certified: Azure Data Fundamentals (2025)
+* Data & Analytics: Power BI Specialization (2023)
+* Bases de Datos: Transact SQL Server Queries (2023)
+* Soporte IT: Reparación y Mantenimiento de Computadoras - INSAFORP (2023)
+* Idiomas: TOEIC / Inglés Superior - Academia Europea (2019 - 2022)
+
+[ IDIOMAS ]
+* Español: Nativo
+* Inglés: Avanzado / Superior (Competencia profesional)
+
+[ REFERENCIAS ]
+Disponibles bajo solicitud.
+        </textarea>
+      </div>
+      <div class="xp-statusbar">
+        <span class="xp-status-col">Líneas: 60, Columnas: 1</span>
+        <span>Windows (CRLF)</span>
+        <span>ANSI</span>
+      </div>
+    </div>
+
+
+    <!-- ==================== WINDOW 6: CURRÍCULUM DRIVE (WORDPAD / DRIVE) ==================== -->
+    <div class="xp-window" id="win-drive" data-title="Currículum Vitae - Google Drive" data-icon="assets/icons/wordpad.png" style="width: 590px; height: 460px; left: 340px; top: 140px;">
+      <div class="xp-titlebar">
+        <div class="xp-titlebar-title">
+          <img src="assets/icons/wordpad.png" alt="">
+          <span>Documento - CV_Efrain_Cortez_2.1.pdf</span>
+        </div>
+        <div class="xp-titlebar-controls">
+          <button class="xp-control-btn" onclick="minimizeWindow('win-drive')">_</button>
+          <button class="xp-control-btn" onclick="maximizeWindow('win-drive')">□</button>
+          <button class="xp-control-btn close" onclick="closeWindow('win-drive')">✕</button>
+        </div>
+      </div>
+      <div class="xp-menubar">
+        <span class="xp-menu-item">Archivo</span>
+        <span class="xp-menu-item">Ver</span>
+        <span class="xp-menu-item">Insertar</span>
+        <span class="xp-menu-item">Formato</span>
+        <span class="xp-menu-item">Ayuda</span>
+      </div>
+      <div class="xp-body" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: #f7f6f0;">
+        
+        <img src="assets/icons/wordpad.png" style="width: 64px; height: 64px; margin-bottom: 12px;" alt="">
+        <h2 style="color: #003399; font-size: 16px; margin-bottom: 6px;">Currículum Vitae Oficial (Versión 2.1)</h2>
+        <p style="color: #555; max-width: 440px; margin-bottom: 16px; line-height: 1.4;">
+          El documento completo y actualizado de <strong>Efraín Antonio Cortez Claros</strong> está disponible para visualización en línea y descarga directa.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 380px;">
+          <a href="https://drive.google.com/file/d/14z8-fCVt2aD1nbwbrG-eAYZ2CMYy4hVZ/view" target="_blank" class="xp-btn primary" style="justify-content: center; padding: 8px 16px; font-size: 13px;">
+            <img src="assets/icons/ie.png" style="width: 18px; height: 18px;" alt=""> Abrir en Google Drive Oficial
+          </a>
+          
+          <a href="assets/CV_Efrain_Cortez.pdf" download="CV_Efrain_Cortez.pdf" class="xp-btn" style="justify-content: center; padding: 8px 16px; font-size: 12px;">
+            <img src="assets/icons/document.png" style="width: 16px; height: 16px;" alt=""> Descargar archivo PDF local
+          </a>
+
+          <button class="xp-btn" onclick="openWindow('win-notepad')" style="justify-content: center; padding: 6px 12px;">
+            <img src="assets/icons/notepad.png" style="width: 16px; height: 16px;" alt=""> Ver versión texto en Bloc de Notas
+          </button>
+        </div>
+
+        <div style="margin-top: 20px; font-size: 10px; color: #777;">
+          Enlace verificado: <a href="https://drive.google.com/file/d/14z8-fCVt2aD1nbwbrG-eAYZ2CMYy4hVZ/view" target="_blank" style="color: #0055ea;">https://drive.google.com/file/d/14z8-fCVt2aD1nbwbrG-eAYZ2CMYy4hVZ/view</a>
+        </div>
+
+      </div>
+      <div class="xp-statusbar">
+        <span class="xp-status-col">PDF: 1.98 MB</span>
+        <span>Listo para descargar o visualizar</span>
+      </div>
+    </div>
+
+
+    <!-- ==================== WINDOW 7: MSN MESSENGER / WHATSAPP CONTACTO ==================== -->
+    <div class="xp-window" id="win-msn" data-title="WhatsApp Contacto - MSN Messenger" data-icon="assets/icons/msn.png" style="width: 540px; height: 490px; left: 380px; top: 90px;">
+      <div class="xp-titlebar">
+        <div class="xp-titlebar-title">
+          <img src="assets/icons/msn.png" alt="">
+          <span>MSN Messenger - Conversación con Efraín Cortez</span>
+        </div>
+        <div class="xp-titlebar-controls">
+          <button class="xp-control-btn" onclick="minimizeWindow('win-msn')">_</button>
+          <button class="xp-control-btn" onclick="maximizeWindow('win-msn')">□</button>
+          <button class="xp-control-btn close" onclick="closeWindow('win-msn')">✕</button>
+        </div>
+      </div>
+      <div class="xp-menubar">
+        <span class="xp-menu-item">Archivo</span>
+        <span class="xp-menu-item">Acciones</span>
+        <span class="xp-menu-item">Herramientas</span>
+        <span class="xp-menu-item">Ayuda</span>
+      </div>
+      <div class="xp-body" style="padding: 0;">
+        
+        <div class="msn-window-body">
+          <div class="msn-user-bar">
+            <div class="msn-avatar-box">
+              <img src="assets/profile.png" alt="Avatar" onerror="this.src='assets/avatar.png'">
+            </div>
+            <div class="msn-user-details">
+              <h3>Efraín Cortez Claros</h3>
+              <div class="msn-status">
+                <span class="msn-status-dot"></span>
+                <span>En línea - Listo para nuevos retos en QA y Desarrollo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="msn-chat-history">
+            <div class="chat-bubble contact">
+              <div class="sender">Efraín Cortez dice:</div>
+              <div>¡Hola! Gracias por visitar mi portafolio interactivo de Windows XP. ¿Tienes un proyecto o vacante en QA, automatización o integraciones?</div>
+            </div>
+            <div class="chat-bubble contact">
+              <div class="sender">Efraín Cortez dice:</div>
+              <div>Puedes escribirme directamente a mi WhatsApp haciendo clic en el botón de abajo, o enviarme un correo. ¡Con gusto responderé a la brevedad!</div>
+            </div>
+          </div>
+
+          <div class="msn-actions-row">
+            <a href="https://wa.me/50360057601" target="_blank" class="xp-btn primary" style="flex: 1; justify-content: center; padding: 8px;">
+              <img src="assets/icons/phone.png" style="width: 16px; height: 16px;" alt=""> Iniciar Chat en WhatsApp (+503 60057601)
+            </a>
+            <a href="mailto:efraincortez777@gmail.com" class="xp-btn" style="flex: 1; justify-content: center; padding: 8px;">
+              <img src="assets/icons/mail.png" style="width: 16px; height: 16px;" alt=""> Enviar Correo Electrónico
+            </a>
+          </div>
+
+          <div style="padding: 0 10px 10px 10px; display: flex; gap: 8px;">
+            <a href="https://linkedin.com/in/efrain-cortez-55b573399" target="_blank" class="xp-btn" style="flex: 1; justify-content: center;">
+              LinkedIn Perfil
+            </a>
+            <a href="https://github.com/EfraPayon777" target="_blank" class="xp-btn" style="flex: 1; justify-content: center;">
+              GitHub Repos
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="xp-statusbar">
+        <span>Último mensaje recibido a las 2:30 PM</span>
+      </div>
+    </div>
+
+
+    <!-- ==================== WINDOW 8: PAPELERA DE RECICLAJE (EASTER EGG) ==================== -->
+    <div class="xp-window" id="win-recycle" data-title="Papelera de reciclaje" data-icon="assets/icons/recycle_full.png" style="width: 520px; height: 380px; left: 280px; top: 110px;">
+      <div class="xp-titlebar">
+        <div class="xp-titlebar-title">
+          <img src="assets/icons/recycle_full.png" alt="">
+          <span>Papelera de reciclaje</span>
+        </div>
+        <div class="xp-titlebar-controls">
+          <button class="xp-control-btn" onclick="minimizeWindow('win-recycle')">_</button>
+          <button class="xp-control-btn" onclick="maximizeWindow('win-recycle')">□</button>
+          <button class="xp-control-btn close" onclick="closeWindow('win-recycle')">✕</button>
+        </div>
+      </div>
+      <div class="xp-menubar">
+        <span class="xp-menu-item">Archivo</span>
+        <span class="xp-menu-item">Edición</span>
+        <span class="xp-menu-item">Ver</span>
+        <span class="xp-menu-item">Ayuda</span>
+      </div>
+      <div class="xp-addressbar">
+        <span class="xp-address-label">Dirección</span>
+        <div class="xp-address-input">
+          <img src="assets/icons/recycle_full.png" alt="">
+          <span>Papelera de reciclaje\Bugs_Eliminados</span>
+        </div>
+        <button class="xp-btn" id="empty-recycle-btn">Vaciar papelera</button>
+      </div>
+      <div class="xp-body" id="recycle-files-list">
+        
+        <table style="width: 100%; border-collapse: collapse; font-size: 11px;">
+          <thead>
+            <tr style="border-bottom: 1px solid #7f9db9; background: #ece9d8; text-align: left;">
+              <th style="padding: 4px;">Nombre</th>
+              <th style="padding: 4px;">Ubicación original</th>
+              <th style="padding: 4px;">Fecha de eliminación</th>
+              <th style="padding: 4px;">Tamaño</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px dotted #ccc;">
+              <td style="padding: 4px; display: flex; align-items: center; gap: 4px;">
+                <img src="assets/icons/document.png" style="width: 14px; height: 14px;" alt=""> Bug_Severidad_Critica_Resuelto.log
+              </td>
+              <td style="padding: 4px;">C:\Producción\Backend</td>
+              <td style="padding: 4px;">Ayer</td>
+              <td style="padding: 4px;">0 KB (Solucionado)</td>
+            </tr>
+            <tr style="border-bottom: 1px dotted #ccc;">
+              <td style="padding: 4px; display: flex; align-items: center; gap: 4px;">
+                <img src="assets/icons/document.png" style="width: 14px; height: 14px;" alt=""> Defecto_Payload_XML_Invalido.dmp
+              </td>
+              <td style="padding: 4px;">C:\Jira\Sprint_QA</td>
+              <td style="padding: 4px;">Semana pasada</td>
+              <td style="padding: 4px;">12 KB</td>
+            </tr>
+            <tr>
+              <td style="padding: 4px; display: flex; align-items: center; gap: 4px;">
+                <img src="assets/icons/document.png" style="width: 14px; height: 14px;" alt=""> Error_404_Endpoints_Legacy.tmp
+              </td>
+              <td style="padding: 4px;">C:\APIs\Swagger</td>
+              <td style="padding: 4px;">Hace 2 días</td>
+              <td style="padding: 4px;">4 KB</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+      <div class="xp-statusbar">
+        <span>3 defectos eliminados (Bugs neutralizados)</span>
+      </div>
+    </div>
+
+
+    <!-- ==================== BALLOON NOTIFICATION ==================== -->
+    <div class="balloon-tip" id="welcome-balloon">
+      <div class="balloon-header">
+        <span>🎉 Bienvenido a Windows XP CV</span>
+        <span class="balloon-close" id="balloon-close" title="Cerrar">✕</span>
+      </div>
+      <div>
+        ¡Hola! Estás explorando el portafolio interactivo de <strong>Efraín Antonio Cortez Claros</strong>.
+        Haz doble clic en los iconos del escritorio o abre el menú <strong>Inicio</strong> para conocer mis habilidades, experiencia y enlaces a mi currículum y WhatsApp.
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- ==================== WINDOWS XP START MENU ==================== -->
+  <div class="start-menu" id="start-menu">
+    
+    <!-- Start Menu Header -->
+    <div class="start-menu-header">
+      <img src="assets/profile.png" alt="Avatar" class="start-avatar" onerror="this.src='assets/avatar.png'">
+      <div>
+        <div class="start-user-name">Efraín Cortez Claros</div>
+        <div class="start-user-role">Analista QA & Automatización</div>
+      </div>
+    </div>
+
+    <!-- Start Menu Body (2 Columns) -->
+    <div class="start-menu-body">
+      
+      <!-- Left Column: Pinned / Key Apps -->
+      <div class="start-left">
+        
+        <div class="start-item" data-action="link" data-target="https://github.com/EfraPayon777">
+          <img src="assets/icons/ie.png" alt="">
+          <div class="start-item-texts">
+            <span class="start-item-title">Internet Explorer</span>
+            <span class="start-item-desc">github.com/EfraPayon777</span>
+          </div>
+        </div>
+
+        <div class="start-item" data-action="open-window" data-target="win-msn">
+          <img src="assets/icons/msn.png" alt="">
+          <div class="start-item-texts">
+            <span class="start-item-title">MSN Messenger</span>
+            <span class="start-item-desc">WhatsApp: +503 60057601</span>
+          </div>
+        </div>
+
+        <div class="start-divider"></div>
+
+        <div class="start-item" data-action="open-window" data-target="win-about">
+          <img src="assets/icons/user.png" alt="">
+          <div class="start-item-texts">
+            <span class="start-item-title">Presentación & Sobre Mí</span>
+            <span class="start-item-desc">Resumen profesional y perfil</span>
+          </div>
+        </div>
+
+        <div class="start-item" data-action="open-window" data-target="win-skills">
+          <img src="assets/icons/control_panel.png" alt="">
+          <div class="start-item-texts">
+            <span class="start-item-title">Panel de Habilidades</span>
+            <span class="start-item-desc">QA, APIs, Python, SQL, DevOps</span>
+          </div>
+        </div>
+
+        <div class="start-item" data-action="open-window" data-target="win-notepad">
+          <img src="assets/icons/notepad.png" alt="">
+          <div class="start-item-texts">
+            <span class="start-item-title">Bloc de notas</span>
+            <span class="start-item-desc">Resumen_Profesional.txt</span>
+          </div>
+        </div>
+
+        <div class="start-item" data-action="open-window" data-target="win-drive">
+          <img src="assets/icons/wordpad.png" alt="">
+          <div class="start-item-texts">
+            <span class="start-item-title">Currículum PDF</span>
+            <span class="start-item-desc">Abrir en Google Drive</span>
+          </div>
+        </div>
+
+        <div class="start-item" data-action="link" data-target="https://cortezefrainlis.wuaze.com">
+          <img src="assets/icons/media_center.png" alt="">
+          <div class="start-item-texts">
+            <span class="start-item-title">Portafolio Web</span>
+            <span class="start-item-desc">cortezefrainlis.wuaze.com</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: System Places -->
+      <div class="start-right">
+        
+        <div class="start-item" data-action="open-window" data-target="win-experience">
+          <img src="assets/icons/folder.png" alt="">
+          <span class="start-item-title">Mis Documentos</span>
+        </div>
+
+        <div class="start-item" data-action="open-window" data-target="win-about">
+          <img src="assets/icons/computer.png" alt="">
+          <span class="start-item-title">Mi PC</span>
+        </div>
+
+        <div class="start-item" data-action="open-window" data-target="win-education">
+          <img src="assets/icons/certificate.png" alt="">
+          <span class="start-item-title">Certificaciones</span>
+        </div>
+
+        <div class="start-item" data-action="open-window" data-target="win-skills">
+          <img src="assets/icons/control_panel.png" alt="">
+          <span class="start-item-title">Panel de control</span>
+        </div>
+
+        <div class="start-divider"></div>
+
+        <div class="start-item" data-action="open-window" data-target="win-about">
+          <img src="assets/icons/help.png" alt="">
+          <span class="start-item-title">Ayuda y soporte</span>
+        </div>
+
+        <div class="start-item" data-action="open-window" data-target="win-skills">
+          <img src="assets/icons/search.png" alt="">
+          <span class="start-item-title">Buscar</span>
+        </div>
+
+        <div class="start-item" data-action="open-window" data-target="win-drive">
+          <img src="assets/icons/run.png" alt="">
+          <span class="start-item-title">Ejecutar...</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Start Menu Footer -->
+    <div class="start-menu-footer">
+      <div class="start-footer-btn trigger-shutdown">
+        <img src="assets/icons/user.png" alt="">
+        <span>Cerrar sesión</span>
+      </div>
+      <div class="start-footer-btn trigger-shutdown">
+        <img src="assets/icons/recycle_empty.png" alt="">
+        <span>Apagar equipo</span>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ==================== WINDOWS XP TASKBAR ==================== -->
+  <footer class="taskbar">
+    
+    <!-- Start Button -->
+    <button class="start-button" id="start-btn" aria-label="Menú Inicio">
+      <span class="start-logo"></span>
+      <span>inicio</span>
+    </button>
+
+    <!-- Quick Launch -->
+    <div class="quick-launch">
+      <button class="quick-btn" id="btn-show-desktop" title="Mostrar escritorio">
+        <img src="assets/icons/document.png" alt="Escritorio">
+      </button>
+      <button class="quick-btn" onclick="window.open('https://github.com/EfraPayon777', '_blank')" title="Mi GitHub">
+        <img src="assets/icons/ie.png" alt="GitHub">
+      </button>
+      <button class="quick-btn" onclick="openWindow('win-msn')" title="WhatsApp Contacto">
+        <img src="assets/icons/msn.png" alt="WhatsApp">
+      </button>
+      <button class="quick-btn" onclick="openWindow('win-drive')" title="CV en Google Drive">
+        <img src="assets/icons/wordpad.png" alt="CV Drive">
+      </button>
+    </div>
+
+    <!-- Active Tasks list -->
+    <div class="taskbar-tasks" id="taskbar-tasks"></div>
+
+    <!-- System Tray (Notification Area) -->
+    <div class="system-tray">
+      <div class="tray-icon" id="sound-toggle-btn" title="Sonido: Activado (Haz clic para silenciar)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 16 16" fill="#fff">
+          <path d="M11.5 8c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM3 5v6h3l4 4V1L6 5H3z"/>
+        </svg>
+      </div>
+      <div class="tray-icon" title="Conexión de área local: 100 Mbps (Conectado)">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 16 16">
+          <path fill="#2980b9" d="M1 2h8v6H1z"/>
+          <path fill="#27ae60" d="M6 6h8v6H6z"/>
+          <path fill="#fff" d="M2 3h6v4H2zM7 7h6v4H7z"/>
+          <rect x="3" y="4" width="4" height="2" fill="#2ecc71"/>
+          <rect x="8" y="8" width="4" height="2" fill="#3498db"/>
+        </svg>
+      </div>
+      <div class="tray-clock" id="tray-clock">12:00 PM</div>
+    </div>
+
+  </footer>
+
+
+  <!-- ==================== DESKTOP CONTEXT MENU ==================== -->
+  <div class="xp-context-menu" id="xp-context-menu">
+    <div class="context-item" data-action="refresh">
+      <span>Actualizar</span>
+    </div>
+    <div class="context-divider"></div>
+    <div class="context-item" data-action="about">
+      <span>Sobre Mí (Mi PC)</span>
+    </div>
+    <div class="context-item" data-action="skills">
+      <span>Panel de Habilidades</span>
+    </div>
+    <div class="context-item" data-action="drive-cv">
+      <span>Abrir CV en Google Drive</span>
+    </div>
+  </div>
+
+
+  <!-- ==================== SHUTDOWN MODAL ==================== -->
+  <div class="shutdown-overlay" id="shutdown-modal">
+    <div class="shutdown-dialog">
+      <div class="shutdown-dialog-header">
+        <span>Apagar el equipo</span>
+        <span class="start-logo"></span>
+      </div>
+      <div class="shutdown-options">
+        <button class="shutdown-btn shutdown-action-btn" data-type="standby">
+          <div class="shutdown-icon-circle standby">🌙</div>
+          <span>Suspender</span>
+        </button>
+        <button class="shutdown-btn shutdown-action-btn" data-type="turnoff">
+          <div class="shutdown-icon-circle">⏻</div>
+          <span>Apagar</span>
+        </button>
+        <button class="shutdown-btn shutdown-action-btn" data-type="restart">
+          <div class="shutdown-icon-circle restart">↻</div>
+          <span>Reiniciar</span>
+        </button>
+      </div>
+      <div class="shutdown-footer">
+        <button class="xp-btn" id="shutdown-cancel-btn">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
