@@ -311,9 +311,13 @@ document.addEventListener('DOMContentLoaded', () => {
       icons.forEach(i => i.classList.remove('selected'));
       icon.classList.add('selected');
 
-      // Double click detection (also friendly for mobile touch taps)
+      // Double click / Mobile tap detection
       const now = Date.now();
-      if (lastClickedIcon === icon && (now - lastClickTime) < 400) {
+      const isMobile = window.innerWidth <= 768 || ('ontouchstart' in window);
+      const isQuickDoubleTap = (lastClickedIcon === icon && (now - lastClickTime) < 600);
+      const isMobileSecondTap = isMobile && lastClickedIcon === icon;
+
+      if (isQuickDoubleTap || isMobileSecondTap) {
         handleIconAction(icon);
         lastClickTime = 0;
         lastClickedIcon = null;
